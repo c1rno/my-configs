@@ -1,0 +1,13 @@
+attrcolor b ".I"
+autodetach on
+bell_msg ""
+caption always
+caption string '%{= Kd} %{= Kd}%-w%{= Kr}[%{= KW}%n %t%{= Kr}]%{= Kd}%+w %-= %{KG} %H%{KW}|%c'
+defbce "on"
+defscrollback 2048
+maptimeout 0
+startup_message off
+term xterm-256color
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+termcapinfo xterm|xterms|xs|rxvt ti@:te@
+vbell off
