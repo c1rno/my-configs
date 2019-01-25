@@ -6,7 +6,7 @@ set nocompatible "must be first line
 set background=light
 filetype plugin indent on "Automatically detect file types
 try
-  colorscheme PaperColor
+  colorscheme default
 endtry
 
 let g:NERDTreeDirArrowCollapsible = '▾'
