@@ -3,10 +3,10 @@
     lg = log --pretty=format:'[%C(auto,red)%h%Creset][%C(auto,green)%cd%Creset][%C(auto,magenta)%aE%Creset]: %s' --graph --date=short --decorate=short
     st = status -uno
 [core]
+    # editor = code --wait
     # editor = emacs -Q -nw
-    # editor = vi --noplugin
     autocrlf = input
-    editor = code --wait
+    editor = vim --noplugin
     excludesfile = ~/.gitignore
     fileMode = false
     longpaths = true
