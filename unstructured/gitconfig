@@ -9,33 +9,32 @@
     editor = vim --noplugin
     excludesfile = ~/.gitignore
     fileMode = false
+    ignorecase = false
     longpaths = true
 [color]
     status = always
 [gc]
     auto = 256
 [diff]
-    # tool = ediff
-    # tool = vidiff
     prompt = true
     renamelimit = 0
     renames = copies
-    tool = vsdiff
+    tool = vidiff
 [difftool "vsdiff"]
     cmd = code --wait --diff $LOCAL $REMOTE
     trustExitCode = false
 [difftool "vidiff"]
-    cmd = vi -R -d $LOCAL $REMOTE  # it's symlink to near vi.sh
+    cmd = vim -d $LOCAL $REMOTE
     trustExitCode = true
 [difftool "ediff"]
     cmd = emacs --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
     trustExitCode = true
 [merge]
-    tool = vidiff
-[mergetool "vidiff"]
-    cmd = vi -d $LOCAL $REMOTE $BASE $MERGED
+    tool = vimerge
+[mergetool "vimerge"]
+    cmd = vim -d $LOCAL $REMOTE $BASE $MERGED
     trustExitCode = true
-[mergetool "ediff"]
+[mergetool "emerge"]
     cmd = emacs --eval \"(ediff-merge-files-with-ancestor \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$BASE\\\" nil \\\"$MERGED\\\")\"
     trustExitCode = true
 [push]

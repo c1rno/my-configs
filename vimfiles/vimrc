@@ -1,23 +1,13 @@
-"call `vim -u NONE` to run it fresh
-"call `ctags(.exe) -R`
-"jump into tag <C-]>, back <C-t>
-"for sort and pass uniq strings call `:sort u`
 set nocompatible "must be first line
-set background=light
 filetype plugin indent on "Automatically detect file types
 try
-  colorscheme default
+  colorscheme PaperColor
 endtry
 
-let g:NERDTreeDirArrowCollapsible = '▾'
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeQuitOnOpen = 1
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeWinSize = 60
-let g:loaded_netrw = 1
-let g:loaded_netrwPlugin = 1
-let g:netrw_loaded_netrwPlugin= 1
 let mapleader="\<Space>"
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
+let g:netrw_liststyle = 3
 
 function WinToLin() "convert line ends
   update
@@ -29,10 +19,11 @@ endfunction
 
 nnoremap <Leader>b :ls<CR>
 nnoremap <Leader>l :call WinToLin()<CR>
-nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>n :Vexplore<CR>
 nnoremap <Leader>p :%!python -m json.tool<CR>
 nnoremap <Leader>q :bd<CR>
 nnoremap <Leader>qq :bd!<CR>
+nnoremap <Leader>t :!ctags -R<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
 
@@ -97,7 +88,6 @@ set nobackup
 set noswapfile
 set nowrap
 set nowritebackup
-set scrolloff=4
 set shiftwidth=4
 set showbreak=¬\
 set showmatch
@@ -123,7 +113,7 @@ set wildmode=list:longest,full "Command <Tab> completion, list matches, then lon
 
 highlight SpecialKey ctermfg=grey guifg=grey
 
-if has('nvim') "&& has('gui_running')
+if has('nvim') && has('gui_running')
   try
     call rpcnotify(0, 'Gui', 'WindowMaximized', 1)
     if has('win32') || has('win64')
