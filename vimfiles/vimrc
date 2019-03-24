@@ -1,16 +1,18 @@
 set nocompatible "must be first line
 filetype plugin indent on "Automatically detect file types
 try
-  colorscheme PaperColor
+  silent! colorscheme PaperColor
 endtry
 
-let mapleader="\<Space>"
-
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
+let g:netrwIsOpen=0
 let g:netrw_altv = 1
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_fastbrowse = 0
+let g:netrw_liststyle = 3
 let g:netrw_winsize = 30
+let mapleader="\<Space>"
+let skip_defaults_vim=1
 
 function WinToLin() "convert line ends
   update
@@ -20,9 +22,26 @@ function WinToLin() "convert line ends
   set nobomb
 endfunction
 
+
+function! ToggleNetrw()
+    if g:netrwIsOpen
+        let i = bufnr("$")
+        while (i >= 1)
+            if (getbufvar(i, "&filetype") == "netrw")
+                silent exe "bwipeout " . i
+            endif
+            let i-=1
+        endwhile
+        let g:netrwIsOpen=0
+    else
+        let g:netrwIsOpen=1
+        silent Lexplore
+    endif
+endfunction
+
 nnoremap <Leader>b :ls<CR>
 nnoremap <Leader>l :call WinToLin()<CR>
-nnoremap <Leader>n :Vexplore<CR>
+nnoremap <Leader>n :call ToggleNetrw()<CR>
 nnoremap <Leader>p :%!python -m json.tool<CR>
 nnoremap <Leader>q :bd<CR>
 nnoremap <Leader>qq :bd!<CR>
@@ -89,6 +108,7 @@ set modelines=0
 set mouse=nv "exclude insert mode
 set nobackup
 set noswapfile
+set notitle
 set nowrap
 set nowritebackup
 set shiftwidth=4
@@ -100,6 +120,7 @@ set tabstop=4
 set tags=tags;/
 set textwidth=0
 set undolevels=32
+set viminfo=""
 set wildignore+=*.ai,*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.psd,*.webp
 set wildignore+=*.aux,*.out,*.toc
 set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
@@ -130,7 +151,7 @@ if has('nvim') && has('gui_running')
 else
   if has('gui')
     set columns=999
-    set guicursor=a:blinkon0,a:ver100-iCursor
+    set guicursor=a:blinkon0,a:ver100-iCursor "Don't wake up system with blinking cursor
     set guioptions=egmrLt
     set lines=99
     highlight iCursor guifg=#ffffff guibg=#000000

@@ -1,0 +1,18 @@
+export EDITOR=vim
+export GOPATH=$HOME/Documents/projects/go-lang
+export HISTCONTROL=ignoredups:ignorespace
+export HISTFILESIZE=500
+export HISTSIZE=500
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+export PAGER=less
+export PATH="$GOPATH/bin:$HOME/Library/Python/2.7/bin:/usr/local/sbin:$PATH"
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+alias cp='cp -v'
+alias grep='grep --color=auto'
+alias less='less -FSRXc'
+alias ll='ls -FGlAhp'
+alias mkdir='mkdir -v'
+alias mv='mv -v'
+
