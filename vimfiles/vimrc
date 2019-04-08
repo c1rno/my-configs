@@ -5,11 +5,8 @@ try
 endtry
 
 let g:netrwIsOpen=0
-let g:netrw_altv = 1
 let g:netrw_banner = 0
-let g:netrw_browse_split = 4
 let g:netrw_fastbrowse = 0
-let g:netrw_liststyle = 3
 let g:netrw_winsize = 30
 let mapleader="\<Space>"
 let skip_defaults_vim=1
@@ -22,21 +19,20 @@ function WinToLin() "convert line ends
   set nobomb
 endfunction
 
-
 function! ToggleNetrw()
-    if g:netrwIsOpen
-        let i = bufnr("$")
-        while (i >= 1)
-            if (getbufvar(i, "&filetype") == "netrw")
-                silent exe "bwipeout " . i
-            endif
-            let i-=1
-        endwhile
-        let g:netrwIsOpen=0
-    else
-        let g:netrwIsOpen=1
-        silent Lexplore
-    endif
+  if g:netrwIsOpen
+    let i = bufnr("$")
+    while (i >= 1)
+      if (getbufvar(i, "&filetype") == "netrw")
+        silent exe "bwipeout " . i
+      endif
+      let i-=1
+    endwhile
+    let g:netrwIsOpen=0
+  else
+    let g:netrwIsOpen=1
+    silent Lexplore
+  endif
 endfunction
 
 nnoremap <Leader>b :ls<CR>
@@ -121,19 +117,8 @@ set tags=tags;/
 set textwidth=0
 set undolevels=32
 set viminfo=""
-set wildignore+=*.ai,*.bmp,*.gif,*.ico,*.jpg,*.jpeg,*.png,*.psd,*.webp
-set wildignore+=*.aux,*.out,*.toc
-set wildignore+=*.avi,*.divx,*.mp4,*.webm,*.mov,*.m2ts,*.mkv,*.vob,*.mpg,*.mpeg
-set wildignore+=*.doc,*.pdf,*.cbr,*.cbz
-set wildignore+=*.eot,*.otf,*.ttf,*.woff
-set wildignore+=*.mp3,*.oga,*.ogg,*.wav,*.flac
-set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest,*.rbc,*.class
-set wildignore+=*.swp,.lock,.DS_Store,._*
-set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz,*.kgb
-set wildignore+=.git,.hg,.svn
 set wildignorecase
-set wildmenu
-set wildmode=list:longest,full "Command <Tab> completion, list matches, then longest common part, then all.
+set wildmode=list:longest
 
 highlight SpecialKey ctermfg=grey guifg=grey
 
