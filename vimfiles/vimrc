@@ -4,6 +4,9 @@ try
   silent! colorscheme PaperColor
 endtry
 
+highlight Cursor guifg=#ffffff guibg=#000000
+highlight SpecialKey ctermfg=grey guifg=grey
+
 let g:netrwIsOpen=0
 let g:netrw_banner = 0
 let g:netrw_fastbrowse = 0
@@ -63,7 +66,7 @@ if has('clipboard')
 endif
 if has('statusline')
   set laststatus=2
-  set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+  set statusline=%<%f%h%m%r\ %b\ %{&encoding}\ 0x\ \ %l,%c%V\ %P
 endif
 if exists('&ttyfast')
   set ttyfast
@@ -119,33 +122,3 @@ set undolevels=32
 set viminfo=""
 set wildignorecase
 set wildmode=list:longest
-
-highlight SpecialKey ctermfg=grey guifg=grey
-
-if has('nvim') && has('gui_running')
-  try
-    call rpcnotify(0, 'Gui', 'WindowMaximized', 1)
-    if has('win32') || has('win64')
-      Guifont! Hack:h10:cRUSSIAN:qDRAFT
-    else
-      Guifont! Hack:h12:cRUSSIAN:qDRAFT
-    endif
-  catch /.*/
-    "echo "Ignore error: " . v:exception
-  endtry
-else
-  if has('gui')
-    set columns=999
-    set guicursor=a:blinkon0,a:ver100-iCursor "Don't wake up system with blinking cursor
-    set guioptions=egmrLt
-    set lines=99
-    highlight iCursor guifg=#ffffff guibg=#000000
-    if has('win32') || has('win64')
-      set guifont=Hack:h10:cRUSSIAN:qDRAFT
-    else
-      set guifont=Hack\ 12
-    endif
-  else
-    highlight Cursor guifg=#ffffff guibg=#000000
-  endif
-endif
