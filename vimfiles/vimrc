@@ -4,8 +4,7 @@ try
   silent! colorscheme PaperColor
 endtry
 
-highlight Cursor guifg=#ffffff guibg=#000000
-highlight SpecialKey ctermfg=grey guifg=grey
+highlight SpecialKey ctermfg=grey guifg=grey "tab&space
 
 let g:netrwIsOpen=0
 let g:netrw_banner = 0
@@ -122,3 +121,4 @@ set undolevels=32
 set viminfo=""
 set wildignorecase
 set wildmode=list:longest
+
