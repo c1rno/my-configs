@@ -1,5 +1,3 @@
-set nocompatible "must be first line
-filetype plugin indent on "Automatically detect file types
 try
   silent! colorscheme PaperColor
 endtry
@@ -13,7 +11,7 @@ let g:netrw_winsize = 30
 let mapleader="\<Space>"
 let skip_defaults_vim=1
 
-function WinToLin() "convert line ends
+function WinToLin() abort "convert line ends
   update
   e ++ff=dos
   setlocal ff=unix
@@ -21,7 +19,7 @@ function WinToLin() "convert line ends
   set nobomb
 endfunction
 
-function! ToggleNetrw()
+function! ToggleNetrw() abort
   if g:netrwIsOpen
     let i = bufnr("$")
     while (i >= 1)
@@ -112,9 +110,6 @@ set nowritebackup
 set shiftwidth=4
 set showbreak=¬\
 set showmatch
-set smarttab
-set softtabstop=4
-set tabstop=4
 set tags=tags;/
 set textwidth=0
 set undolevels=32
