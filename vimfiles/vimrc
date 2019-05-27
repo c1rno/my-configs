@@ -63,7 +63,7 @@ if has('clipboard')
 endif
 if has('statusline')
   set laststatus=2
-  set statusline=%<%f%h%m%r\ %b\ %{&encoding}\ 0x\ \ %l,%c%V\ %P
+  set statusline=%F\ %m\%=\%l\/%c\ %{&encoding}
 endif
 if exists('&ttyfast')
   set ttyfast
@@ -112,8 +112,9 @@ set showbreak=¬\
 set showmatch
 set tags=tags;/
 set textwidth=0
+set ttimeout
+set ttimeoutlen=50
 set undolevels=32
 set viminfo=""
 set wildignorecase
 set wildmode=list:longest
-
