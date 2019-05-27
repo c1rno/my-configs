@@ -1,18 +1,16 @@
-attrcolor b ".I"
-autodetach on
+autodetach on # already enabled by default
 bell_msg ""
 bindkey ^[[1;2C next # shift right arrow
 bindkey ^[[1;2D prev # shift left arrow
 caption splitonly
-defbce on
-defflow off
 defscrollback 4096
 hardstatus alwayslastline "%-Lw%{= GW}%50>%n%f* %t%{-}%+Lw%<"
 maptimeout 5  # http://vim.wikia.com/wiki/GNU_Screen_integration
+nonblock on 5
+obuflimit 1024
 shelltitle "???"
 startup_message off
 term "screen-256color"
-termcapinfo xterm "Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm"
-termcapinfo xterm|xterms|xs|rxvt ti@:te@
 title "???"
+truecolor on
 vbell off
