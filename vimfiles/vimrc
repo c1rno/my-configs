@@ -1,5 +1,5 @@
 try
-  silent! colorscheme PaperColor
+  silent! colorscheme morning
 endtry
 
 highlight SpecialKey ctermfg=grey guifg=grey "tab&space
