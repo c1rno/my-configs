@@ -69,7 +69,7 @@ if exists('&ttyfast')
   set ttyfast
 endif
 if has('termguicolors')
-  set notermguicolors
+  set termguicolors
 endif
 if has('syntax')
   if &diff
