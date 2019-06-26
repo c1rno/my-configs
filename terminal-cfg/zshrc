@@ -13,7 +13,7 @@ plugins=(git cp tmux docker golang)
 
 export ZSH="${HOME}/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
-PROMPT='%(!.%{$fg[red]%}.%{$fg[cyan]%})%~%{$fg_bold[blue]%}%{$reset_color%} '
+PROMPT='%(!.%{$fg[red]%}.%{$fg[cyan]%})%2~%{$fg_bold[blue]%}%{$reset_color%} '
 
 # User configuration
 export EDITOR=vim

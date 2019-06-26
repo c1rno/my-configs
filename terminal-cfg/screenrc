@@ -1,10 +1,11 @@
+attrcolor b ".I"
 autodetach on # already enabled by default
 bell_msg ""
 bindkey ^[[1;2C next # shift right arrow
 bindkey ^[[1;2D prev # shift left arrow
 caption splitonly
 defscrollback 4096
-hardstatus alwayslastline "%-Lw%{= GW}%50>%n%f* %t%{-}%+Lw%<"
+hardstatus alwayslastline "%-Lw%{= CW}%50>%n%f* %t%{-}%+Lw%<"
 maptimeout 5  # http://vim.wikia.com/wiki/GNU_Screen_integration
 nonblock on 5
 obuflimit 1024
