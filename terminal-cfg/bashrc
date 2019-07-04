@@ -8,7 +8,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PAGER=less
 export PATH="$GOPATH/bin:/snap/bin:$HOME/Library/Python/2.7/bin:/usr/local/sbin:$PATH"
-export PS1='\[\033[01;36m\]\W\[\033[00m\] \e[36m\e[1m»\e[0m '
+export PS1="[\u@\h \W]\\$ "
 
 alias cp='cp -v'
 alias grep='grep --color=auto'
