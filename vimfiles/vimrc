@@ -69,7 +69,7 @@ if exists('&ttyfast')
   set ttyfast
 endif
 if has('termguicolors')
-  set termguicolors
+  set notermguicolors
 endif
 if has('syntax')
   if &diff
@@ -105,10 +105,9 @@ set mouse=nv "exclude insert mode
 set nobackup
 set noswapfile
 set notitle
-set nowrap
 set nowritebackup
 set shiftwidth=4
-set showbreak=¬\
+set showbreak=¬
 set showmatch
 set tags=tags;/
 set textwidth=0
