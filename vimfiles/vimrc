@@ -47,7 +47,7 @@ nnoremap <Tab> :bnext<CR>
 
 if !has('nvim')
   if has('win32') || has('win64')
-    set renderoptions=type:directx
+    set renderoptions^=type:directx
   else
     set term=$TERM "Make arrow and other keys work
   endif
@@ -56,9 +56,9 @@ if &term == 'xterm' || &term == 'screen'
   set t_Co=256 "Enable 256 colors to stop the CSApprox warning and make xterm vim shine
 endif
 if has('clipboard')
-  set clipboard=unnamed "On mac and Windows, use * register for copy-paste
-  if has('unnamedplus') "When possible use + register for copy-paste
-    set clipboard+=unnamedplus
+  set clipboard^=unnamed "On mac and Windows, use * register for copy-paste
+  if has('unnamedplus')  "When possible use + register for copy-paste
+    set clipboard^=unnamedplus
   endif
 endif
 if has('statusline')
