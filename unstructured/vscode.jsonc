@@ -113,7 +113,7 @@
     "window.title": "${dirty}${rootName}${separator}${activeEditorLong}",
     "window.titleBarStyle": "native",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "PaperColor Redux",
+    "workbench.colorTheme": "Default Light+",
     "workbench.commandPalette.history": 5,
     "workbench.editor.closeEmptyGroups": false,
     "workbench.editor.closeOnFileDelete": false,

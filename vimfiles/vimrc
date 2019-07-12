@@ -101,7 +101,7 @@ set list
 set listchars=tab:•·,trail:•,nbsp:¤,extends:»,precedes:«
 set matchtime=1
 set modelines=0
-set mouse=nv "exclude insert mode
+set mouse= "disable mouse
 set nobackup
 set noswapfile
 set notitle
