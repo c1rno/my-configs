@@ -8,11 +8,11 @@ defscrollback 4096
 hardstatus alwayslastline "%-Lw%{= CW}%50>%n%f* %t%{-}%+Lw%<"
 maptimeout 5  # http://vim.wikia.com/wiki/GNU_Screen_integration
 nethack on
-nonblock on 5
+nonblock 5
 obuflimit 1024
 shelltitle "???"
 startup_message off
 term "screen-256color"
 title "???"
-truecolor on
 vbell off
+
