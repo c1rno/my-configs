@@ -1,5 +1,5 @@
 try
-  silent! colorscheme morning
+  silent! colorscheme elflord
 endtry
 
 highlight SpecialKey ctermfg=grey guifg=grey "tab&space
@@ -61,10 +61,6 @@ if has('clipboard')
     set clipboard^=unnamedplus
   endif
 endif
-if has('statusline')
-  set laststatus=2
-  set statusline=%F\ %m\%=\%l\/%c\ %{&encoding}
-endif
 if exists('&ttyfast')
   set ttyfast
 endif
@@ -83,6 +79,11 @@ if has('syntax')
 endif
 if v:version > 700
   set omnifunc=syntaxcomplete#Complete
+endif
+if has('statusline')
+  set laststatus=2
+  set statusline=%F\ %m\%=\%l\/%c\ %{&encoding}
+  hi StatusLine ctermbg=black ctermfg=white guibg=black guifg=white
 endif
 if has('patch-8.1.0360')
   set diffopt=internal,algorithm:patience,indent-heuristic
