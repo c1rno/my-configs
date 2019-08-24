@@ -79,6 +79,7 @@
     "gitlens.views.repositories.avatars": false,
     "gitlens.views.search.avatars": false,
     "go.lintTool": "gometalinter",
+    "go.useLanguageServer": true,
     "html.format.enable": false,
     "html.format.wrapLineLength": 0,
     "keyboard.touchbar.enabled": false,
@@ -103,6 +104,7 @@
     "terminal.integrated.lineHeight": 1,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "terminal.integrated.windowsEnableConpty": true,
+    "update.showReleaseNotes": false,
     "window.autoDetectHighContrast": false,
     "window.nativeTabs": true,
     "window.newWindowDimensions": "fullscreen",
@@ -124,6 +126,7 @@
     "workbench.editor.restoreViewState": false,
     "workbench.editor.tabSizing": "shrink",
     "workbench.enableExperiments": false,
+    "workbench.iconTheme": "vs-minimal",
     "workbench.list.horizontalScrolling": true,
     "workbench.settings.editor": "json",
     "workbench.settings.enableNaturalLanguageSearch": false,
@@ -139,7 +142,8 @@
     "files.watcherExclude": {
         "**/.git": true,
         "**/node_modules": true,
-        "**/vendor": true
+        "**/vendor": true,
+        "**/.idea": true,
     },
     "gitlens.recentChanges.highlight.locations": [
         "gutter"
