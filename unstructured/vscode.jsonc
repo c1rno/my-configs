@@ -82,6 +82,10 @@
     "go.useLanguageServer": true,
     "html.format.enable": false,
     "html.format.wrapLineLength": 0,
+    "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": true,
+    "intelephense.completion.maxItems": 5,
+    "intelephense.maxMemory": 512,
+    "jake.autoDetect": "off",
     "keyboard.touchbar.enabled": false,
     "merge-conflict.codeLens.enabled": false,
     "npm.fetchOnlinePackageInfo": false,
@@ -189,5 +193,5 @@
             "remote": true,
             "stash": true
         }
-    }
+    },
 }
