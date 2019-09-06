@@ -1,4 +1,5 @@
 export EDITOR=vim
+export GO111MODULE=on
 export GOPATH=$HOME/Documents/projects/go-lang
 export HISTCONTROL=ignoredups:ignorespace
 export HISTFILESIZE=500
@@ -7,7 +8,7 @@ export KUBECONFIG=$HOME/.kube/config.prod:$HOME/.kube/config
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PAGER=less
-export PATH="$GOPATH/bin:/snap/bin:$HOME/Library/Python/2.7/bin:/usr/local/sbin:$PATH"
+export PATH="$GOPATH/bin:/snap/bin:$HOME/Library/Python/2.7/bin:/usr/local/sbin:/usr/local/Cellar/kubernetes-cli/1.15.0/bin:$PATH"
 export PS1="[\u@\h \W]\\$ "
 
 alias cp='cp -v'
@@ -16,4 +17,6 @@ alias less='less -FSRXc'
 alias ll='ls -FGlAhp'
 alias mkdir='mkdir -v'
 alias mv='mv -v'
+
+eval "$(starship init bash)"
 

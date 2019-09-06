@@ -10,3 +10,6 @@ How to:
 - `git submodule update --remote --merge` || `git submodule update --init`
 - (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) || `git rm [--cached] <path to plugin>`
 - `git submodule add https://github.com/<plugin name> vimfiles\pack\plugins\start\<plugin name>`
+
+##### [Pretty shell prompt](https://starship.rs)
+
