@@ -1,7 +1,7 @@
 *.antialias: true
 *.autohint: 0
 *.dpi: 96
-*.font: xft:Hack:size=12
+*.font: xft:"Fira Code":size=12
 *.hinting:true
 *.hintstyle: hintfull
 *.lcdfilter: lcddefault
