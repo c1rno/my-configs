@@ -1,5 +1,5 @@
 try
-  silent! colorscheme elflord
+  silent! colorscheme default
 endtry
 
 highlight SpecialKey ctermfg=grey guifg=grey "tab&space

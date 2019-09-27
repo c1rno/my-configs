@@ -119,7 +119,7 @@
     "window.title": "${dirty}${rootName}${separator}${activeEditorLong}",
     "window.titleBarStyle": "native",
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Visual Studio Light",
     "workbench.commandPalette.history": 5,
     "workbench.editor.closeEmptyGroups": false,
     "workbench.editor.closeOnFileDelete": false,

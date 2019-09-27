@@ -18,5 +18,7 @@ alias ll='ls -FGlAhp'
 alias mkdir='mkdir -v'
 alias mv='mv -v'
 
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
+
+#eval "$(direnv hook bash)"
 
