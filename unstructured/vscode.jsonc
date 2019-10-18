@@ -103,7 +103,7 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.cursorStyle": "block",
-    "terminal.integrated.fontFamily": "Fira Code, monospace",
+    "terminal.integrated.fontFamily": "Fira Code Retina, monospace",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1,
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",

@@ -1,22 +1,8 @@
-COMPLETION_WAITING_DOTS=true
-DISABLE_AUTO_TITLE=true
-DISABLE_MAGIC_FUNCTIONS=true
-DISABLE_UNTRACKED_FILES_DIRTY=true
-DISABLE_UPDATE_PROMPT=true
-HYPHEN_INSENSITIVE=true
-MENU_COMPLETE=true
-ZSH_DISABLE_COMPFIX=true
-ZSH_THEME=simple
 skip_global_compinit=1
-
-plugins=(git cp tmux docker golang)
-
-export ZSH="${HOME}/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
-PROMPT='%(!.%{$fg[red]%}.%{$fg[cyan]%})%2~%{$fg_bold[blue]%}%{$reset_color%} '
 
 # User configuration
 export EDITOR=vim
+export GO111MODULE=on
 export GOPATH=$HOME/Documents/projects/go-lang
 export HISTCONTROL=ignoredups:ignorespace
 export HISTFILESIZE=500
@@ -25,7 +11,14 @@ export KUBECONFIG=$HOME/.kube/config.prod:$HOME/.kube/config
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PAGER=less
-export PATH="$GOPATH/bin:/snap/bin:$HOME/Library/Python/2.7/bin:/usr/local/sbin:$PATH"
+export PATH="$GOPATH/bin:/snap/bin:$HOME/Library/Python/2.7/bin:/usr/local/sbin:/usr/local/Cellar/kubernetes-cli/1.15.0/bin:$PATH"
+PROMPT='%~ %# '
 
-alias rm="/usr/local/Cellar/rmtrash/0.3.3/bin/rmtrash"
+alias cp='cp -v'
+alias grep='grep --color=auto'
+alias less='less -FSRXc'
+alias ll='ls -FGlAhp'
+alias mkdir='mkdir -v'
+alias mv='mv -v'
+
 
