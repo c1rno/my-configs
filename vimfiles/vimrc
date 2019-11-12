@@ -1,7 +1,8 @@
 try
-  silent! colorscheme default
+  silent! colorscheme PaperColor
 endtry
 
+filetype plugin on
 highlight SpecialKey ctermfg=grey guifg=grey "tab&space
 
 let g:netrwIsOpen=0

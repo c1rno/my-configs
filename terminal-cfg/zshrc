@@ -1,9 +1,9 @@
+PROMPT='%~ %# '
 skip_global_compinit=1
 
 # User configuration
 export EDITOR=vim
-export GO111MODULE=on
-export GOPATH=$HOME/Documents/projects/go-lang
+export GOPATH=$HOME/Documents/workspace/go-lang
 export HISTCONTROL=ignoredups:ignorespace
 export HISTFILESIZE=500
 export HISTSIZE=500
@@ -12,7 +12,6 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PAGER=less
 export PATH="$GOPATH/bin:/snap/bin:$HOME/Library/Python/2.7/bin:/usr/local/sbin:/usr/local/Cellar/kubernetes-cli/1.15.0/bin:$PATH"
-PROMPT='%~ %# '
 
 alias cp='cp -v'
 alias grep='grep --color=auto'
@@ -20,5 +19,4 @@ alias less='less -FSRXc'
 alias ll='ls -FGlAhp'
 alias mkdir='mkdir -v'
 alias mv='mv -v'
-
 
