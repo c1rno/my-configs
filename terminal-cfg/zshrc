@@ -1,5 +1,18 @@
-PROMPT='%~ %# '
+DISABLE_AUTO_TITLE="true"
+PROMPT="[%m@%n %~]# "
 skip_global_compinit=1
+
+unsetopt PROMPT_SP
+unsetopt beep
+
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt share_history
+
+# Explicitly enable reverse search
+bindkey '^R' history-incremental-search-backward
+bindkey -v
 
 # User configuration
 export EDITOR=vim
