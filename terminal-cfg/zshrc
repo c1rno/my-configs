@@ -1,5 +1,5 @@
 DISABLE_AUTO_TITLE="true"
-PROMPT="[%m@%n %~]# "
+PROMPT="[%n@%m %~]# "
 skip_global_compinit=1
 
 unsetopt PROMPT_SP
