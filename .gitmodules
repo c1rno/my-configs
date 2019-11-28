@@ -1,4 +1,4 @@
-[submodule "vimfiles/pack/plugins/start/ale"]
+[submodule "vimfiles/pack/plugins/start/papercolor-theme"]
 	path = vimfiles/pack/plugins/start/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme.git
 [submodule "vimfiles/pack/plugins/start/nerdcommenter"]
