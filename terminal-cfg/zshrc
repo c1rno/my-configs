@@ -8,6 +8,7 @@ unsetopt beep
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt hist_reduce_blanks
+setopt interactive_comments
 setopt share_history
 
 # Explicitly enable reverse search
