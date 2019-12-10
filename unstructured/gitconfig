@@ -40,5 +40,5 @@
 [push]
     default = simple
 [user]
-    email =
+    email = ivan@bogomolov.su
     name = Ivan Bogomolov
