@@ -120,3 +120,6 @@ set undolevels=32
 set viminfo=""
 set wildignorecase
 set wildmode=list:longest
+
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
