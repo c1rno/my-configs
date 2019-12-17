@@ -6,7 +6,8 @@ Good Iterm theme here https://github.com/aseom/dotfiles/blob/master/osx/iterm2/p
 
 Requires VIM 8 (now using native plugins)
 
-For docker do not forget enable `build_kit`
+For docker do not forget enable `build_kit` and really usefull cmd `docker system prune -a --volumes`
+[tricky docker endpoint](https://github.com/bufferings/docker-access-host/blob/master/docker-entrypoint.sh)
 
 Other how to:
 - `git clone --recurse-submodules -j8 https://github.com/c1rno/my-configs.git` (or, for old git use `--recursive`)
