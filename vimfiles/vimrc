@@ -5,10 +5,7 @@ endtry
 filetype plugin on
 highlight SpecialKey ctermfg=grey guifg=grey "tab&space
 
-let g:netrwIsOpen=0
-let g:netrw_banner = 0
-let g:netrw_fastbrowse = 0
-let g:netrw_winsize = 30
+let loaded_netrwPlugin = 1
 let mapleader="\<Space>"
 let skip_defaults_vim=1
 
@@ -26,22 +23,6 @@ function! WinToLin() abort "convert line ends
   set nobomb
 endfunction
 
-function! ToggleNetrw() abort
-  if g:netrwIsOpen
-    let i = bufnr("$")
-    while (i >= 1)
-      if (getbufvar(i, "&filetype") == "netrw")
-        silent exe "bwipeout " . i
-      endif
-      let i-=1
-    endwhile
-    let g:netrwIsOpen=0
-  else
-    let g:netrwIsOpen=1
-    silent Lexplore
-  endif
-endfunction
-
 function! TagsStatus() abort
   try
     return gutentags#statusline()
@@ -50,9 +31,9 @@ function! TagsStatus() abort
   endtry
 endfunction
 
-nnoremap <leader>b :buffers<CR>:buffer<space>
+map <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>b :buffers<CR>:buffer<space>
 nnoremap <Leader>l :call WinToLin()<CR>
-nnoremap <Leader>n :call ToggleNetrw()<CR>
 nnoremap <Leader>p :%!python -m json.tool<CR>
 nnoremap <Leader>q :bd<CR>
 nnoremap <Leader>qq :bd!<CR>
