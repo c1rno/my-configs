@@ -15,5 +15,5 @@ Other how to:
 - (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) || `git rm [--cached] <path to plugin>`
 - `git submodule add https://github.com/<plugin name> vimfiles\pack\plugins\start\<plugin name>`
 - from [doc](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent): `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
-
+- for vim https://github.com/universal-ctags/ctags
 

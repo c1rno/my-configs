@@ -7,3 +7,6 @@
 [submodule "vimfiles/pack/plugins/start/ale"]
 	path = vimfiles/pack/plugins/start/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "vimfiles/pack/plugins/start/gutentags"]
+	path = vimfiles/pack/plugins/start/gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git

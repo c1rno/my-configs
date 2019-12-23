@@ -12,7 +12,13 @@ let g:netrw_winsize = 30
 let mapleader="\<Space>"
 let skip_defaults_vim=1
 
-function WinToLin() abort "convert line ends
+let g:gutentags_ctags_extra_args = [
+  \ '--tag-relative=yes',
+  \ '--fields=+ailmnS',
+  \ '--languages=Python,Go',
+\ ]
+
+function! WinToLin() abort "convert line ends
   update
   e ++ff=dos
   setlocal ff=unix
@@ -36,13 +42,20 @@ function! ToggleNetrw() abort
   endif
 endfunction
 
+function! TagsStatus() abort
+  try
+    return gutentags#statusline()
+  catch
+    return ""
+  endtry
+endfunction
+
 nnoremap <leader>b :buffers<CR>:buffer<space>
 nnoremap <Leader>l :call WinToLin()<CR>
 nnoremap <Leader>n :call ToggleNetrw()<CR>
 nnoremap <Leader>p :%!python -m json.tool<CR>
 nnoremap <Leader>q :bd<CR>
 nnoremap <Leader>qq :bd!<CR>
-nnoremap <Leader>t :!ctags -R<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
 
@@ -83,7 +96,7 @@ if v:version > 700
 endif
 if has('statusline')
   set laststatus=2
-  set statusline=%F\ %m\%=\%l\/%c\ %{&encoding}
+  set statusline=%F\ %m\ %{TagsStatus()}\ %=\%l\/%c\ %{&encoding}
   hi StatusLine ctermbg=black ctermfg=white guibg=black guifg=white
 endif
 if has('patch-8.1.0360')
