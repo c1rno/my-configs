@@ -2,16 +2,17 @@ DISABLE_AUTO_TITLE="true"
 PROMPT="[%n@%m %~]# "
 skip_global_compinit=1
 
+setopt ALWAYS_TO_END
+setopt AUTO_LIST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt INTERACTIVE_COMMENTS
+setopt LIST_AMBIGUOUS
+unsetopt AUTO_MENU
+unsetopt BEEP
+unsetopt MENU_COMPLETE
 unsetopt PROMPT_SP
-unsetopt beep
-
-setopt autolist
-setopt hist_ignore_all_dups
-setopt hist_ignore_space
-setopt hist_reduce_blanks
-setopt interactive_comments
-setopt noautomenu
-setopt nomenucomplete
 
 # Explicitly enable reverse search
 bindkey '^R' history-incremental-search-backward
