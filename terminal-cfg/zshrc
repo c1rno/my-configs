@@ -2,6 +2,7 @@ DISABLE_AUTO_TITLE="true"
 PROMPT="[%n@%m %~]# "
 skip_global_compinit=1
 
+# Configure stupid competition
 setopt ALWAYS_TO_END
 setopt AUTO_LIST
 setopt HIST_IGNORE_DUPS
@@ -17,6 +18,29 @@ unsetopt PROMPT_SP
 # Explicitly enable reverse search
 bindkey '^R' history-incremental-search-backward
 bindkey -v
+
+#### https://hellricer.github.io/2019/05/21/ctrl-arrows-in-terminal.html
+### and use xterm keys in Iterm2 + tmux
+### ctrl+arrows
+bindkey "\e[1;5C" forward-word
+bindkey "\e[1;5D" backward-word
+# urxvt
+bindkey "\eOc" forward-word
+bindkey "\eOd" backward-word
+
+### ctrl+delete
+bindkey "\e[3;5~" kill-word
+# urxvt
+bindkey "\e[3^" kill-word
+
+### ctrl+backspace
+bindkey '^H' backward-kill-word
+
+### ctrl+shift+delete
+bindkey "\e[3;6~" kill-line
+# urxvt
+bindkey "\e[3@" kill-line
+####
 
 # User configuration
 export EDITOR=vim
