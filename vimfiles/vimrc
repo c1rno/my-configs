@@ -15,6 +15,9 @@ let g:gutentags_ctags_extra_args = [
   \ '--languages=Python,Go',
 \ ]
 
+let g:vim_markdown_no_default_key_mappings = 1
+let g:vim_markdown_conceal = 0
+
 function! WinToLin() abort "convert line ends
   update
   e ++ff=dos
@@ -100,6 +103,7 @@ set matchtime=1
 set modelines=0
 set mouse= "disable mouse
 set nobackup
+set nofoldenable
 set noswapfile
 set notitle
 set nowrap

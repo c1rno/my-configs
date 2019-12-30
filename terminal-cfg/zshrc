@@ -15,9 +15,9 @@ unsetopt BEEP
 unsetopt MENU_COMPLETE
 unsetopt PROMPT_SP
 
+bindkey -e
 # Explicitly enable reverse search
 bindkey '^R' history-incremental-search-backward
-bindkey -v
 
 #### https://hellricer.github.io/2019/05/21/ctrl-arrows-in-terminal.html
 ### and use xterm keys in Iterm2 + tmux
@@ -68,4 +68,6 @@ alias less='less -FSRXc'
 alias ll='ls -FGlAhp'
 alias mkdir='mkdir -v'
 alias mv='mv -v'
+
+[[ -e ~/.private_cfg ]] && emulate sh -c 'source ~/.private_cfg'
 

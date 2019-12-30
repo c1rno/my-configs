@@ -13,3 +13,6 @@
 [submodule "vimfiles/pack/plugins/start/nerdtree"]
 	path = vimfiles/pack/plugins/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vimfiles/pack/plugins/start/markdown-vim"]
+	path = vimfiles/pack/plugins/start/markdown-vim
+	url = https://github.com/plasticboy/vim-markdown.git
