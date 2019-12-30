@@ -40,6 +40,19 @@ bindkey '^H' backward-kill-word
 bindkey "\e[3;6~" kill-line
 # urxvt
 bindkey "\e[3@" kill-line
+
+### https://wiki.archlinux.org/index.php/Home_and_End_keys_not_working
+### home (mac: fn+left-arrow)
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[7~" beginning-of-line
+bindkey "\eOH" beginning-of-line
+bindkey "\e[H" beginning-of-line
+
+### end (mac: fn+right-arrow)
+bindkey "\e[F" end-of-line
+bindkey "\eOF" end-of-line
+bindkey "\e[8~" end-of-line
+bindkey "\e[4~" end-of-line
 ####
 
 # User configuration
