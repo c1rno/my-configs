@@ -3,8 +3,6 @@
     lg = log --pretty=format:'[%C(auto,red)%h%Creset][%C(auto,green)%cd%Creset][%C(auto,magenta)%aE%Creset]: %s' --graph --date=short --decorate=short
     st = status -uno
 [core]
-    # editor = code --wait
-    # editor = emacs -Q -nw
     autocrlf = input
     editor = vim --noplugin
     excludesfile = ~/.gitignore
@@ -20,22 +18,13 @@
     renamelimit = 0
     renames = copies
     tool = vidiff
-[difftool "vsdiff"]
-    cmd = code --wait --diff $LOCAL $REMOTE
-    trustExitCode = false
 [difftool "vidiff"]
     cmd = vim -d $LOCAL $REMOTE
-    trustExitCode = true
-[difftool "ediff"]
-    cmd = emacs --eval \"(ediff-files \\\"$LOCAL\\\" \\\"$REMOTE\\\")\"
     trustExitCode = true
 [merge]
     tool = vimerge
 [mergetool "vimerge"]
     cmd = vim -d $LOCAL $REMOTE $BASE $MERGED
-    trustExitCode = true
-[mergetool "emerge"]
-    cmd = emacs --eval \"(ediff-merge-files-with-ancestor \\\"$LOCAL\\\" \\\"$REMOTE\\\" \\\"$BASE\\\" nil \\\"$MERGED\\\")\"
     trustExitCode = true
 [push]
     default = simple

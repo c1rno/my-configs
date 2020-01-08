@@ -18,6 +18,8 @@ let g:gutentags_ctags_extra_args = [
 let g:vim_markdown_no_default_key_mappings = 1
 let g:vim_markdown_conceal = 0
 
+let NERDTreeShowHidden=1
+
 function! WinToLin() abort "convert line ends
   update
   e ++ff=dos
@@ -87,6 +89,7 @@ if has('patch-8.1.0360')
   set diffopt=internal,algorithm:patience,indent-heuristic
 endif
 
+set background=light
 set backspace=indent,eol,start
 set encoding=utf-8
 set fileencodings=utf-8,cp1251,koi8-r,cp866

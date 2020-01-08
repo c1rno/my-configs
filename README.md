@@ -1,10 +1,9 @@
 Just a place where I can synchronize my cfgs ower multiple machines
 
 Good font you may find there https://github.com/tonsky/FiraCode.
-Good Iterm theme here https://github.com/aseom/dotfiles/blob/master/osx/iterm2/papercolor-light.itermcolors
- or, theme for default's mac term you may use [it](./theme/PaperColor-light.terminal).
+Good Iterm2 theme here https://github.com/stoeffel/material-iterm.
 
-Requires VIM 8 (now using native plugins)
+VIM setup working with 8+ version and neovim (neovim preferred)
 
 For docker do not forget enable `build_kit` and really usefull cmd `docker system prune -a --volumes`
 [tricky docker endpoint](https://github.com/bufferings/docker-access-host/blob/master/docker-entrypoint.sh)
