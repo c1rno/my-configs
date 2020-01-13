@@ -40,10 +40,9 @@ map <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>b :buffers<CR>:buffer<space>
 nnoremap <Leader>l :call WinToLin()<CR>
 nnoremap <Leader>p :%!python -m json.tool<CR>
-nnoremap <Leader>q :bd<CR>
-nnoremap <Leader>qq :bd!<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
+noremap <Leader>q :bd<CR>
 
 if !has('nvim')
   if has('win32') || has('win64')
