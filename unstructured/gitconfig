@@ -9,8 +9,10 @@
     fileMode = false
     ignorecase = false
     longpaths = true
+    whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 [color]
     status = always
+    ui = auto
 [gc]
     auto = 256
 [diff]

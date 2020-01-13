@@ -12,7 +12,7 @@
     "editor.copyWithSyntaxHighlighting": false,
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": true,
-    "editor.cursorStyle": "block",
+    "editor.cursorStyle": "line",
     "editor.cursorWidth": 3,
     "editor.dragAndDrop": false,
     "editor.emptySelectionClipboard": false,

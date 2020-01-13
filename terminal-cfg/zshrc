@@ -2,6 +2,8 @@ DISABLE_AUTO_TITLE="true"
 PROMPT="[%n@%m %~]# "
 skip_global_compinit=1
 
+autoload -U colors && colors
+
 # Configure stupid competition
 setopt ALWAYS_TO_END
 setopt AUTO_LIST
