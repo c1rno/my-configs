@@ -2,11 +2,11 @@
   "Working Directory" : "\/Users\/ivan",
   "Prompt Before Closing 2" : 2,
   "Selected Text Color" : {
-    "Red Component" : 0.30725997686386108,
-    "Color Space" : "Calibrated",
-    "Blue Component" : 0.30725601315498352,
+    "Red Component" : 0.23529411764705882,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.22745098039215686,
     "Alpha Component" : 1,
-    "Green Component" : 0.30725079774856567
+    "Green Component" : 0.23137254901960785
   },
   "Rows" : 25,
   "Ansi 11 Color" : {
@@ -27,11 +27,11 @@
   "Right Option Key Sends" : 0,
   "Character Encoding" : 4,
   "Selection Color" : {
-    "Red Component" : 0.76021528244018555,
-    "Color Space" : "Calibrated",
-    "Blue Component" : 0.76020538806915283,
+    "Red Component" : 1,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0,
     "Alpha Component" : 1,
-    "Green Component" : 0.76019245386123657
+    "Green Component" : 0.55686274509803924
   },
   "Show Mark Indicators" : false,
   "Mouse Reporting" : true,
@@ -87,11 +87,11 @@
   "Shortcut" : "",
   "Background Image Location" : "",
   "Bold Color" : {
-    "Red Component" : 0.16443461179733276,
-    "Color Space" : "Calibrated",
-    "Blue Component" : 0.24254441261291504,
+    "Red Component" : 0.23529411764705882,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.22745098039215686,
     "Alpha Component" : 1,
-    "Green Component" : 0.21523168683052063
+    "Green Component" : 0.23137254901960785
   },
   "Unlimited Scrollback" : false,
   "Allow Title Setting" : false,
@@ -320,7 +320,7 @@
   "Send Code When Idle" : false,
   "ASCII Anti Aliased" : true,
   "Tags" : [
-    "paper-color"
+    "material-light"
   ],
   "Ansi 9 Color" : {
     "Red Component" : 0.90986210107803345,
