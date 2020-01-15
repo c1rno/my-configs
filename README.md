@@ -1,12 +1,13 @@
 Just a place where I can synchronize my cfgs ower multiple machines
 
-Good font you may find there https://github.com/tonsky/FiraCode.
+Good font you may find there https://www.jetbrains.com/lp/mono/.
 Good Iterm2 theme here https://github.com/stoeffel/material-iterm.
 
 VIM setup working with 8+ version and neovim (neovim preferred)
 
 For docker do not forget enable `build_kit` and really usefull cmd `docker system prune -a --volumes`
 [tricky docker endpoint](https://github.com/bufferings/docker-access-host/blob/master/docker-entrypoint.sh)
+Not forget `brew analytics off`
 
 Other how to:
 - `git clone --recurse-submodules -j8 https://github.com/c1rno/my-configs.git` (or, for old git use `--recursive`)

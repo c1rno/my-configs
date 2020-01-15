@@ -364,7 +364,7 @@
   },
   "Name" : "Custom",
   "Blinking Cursor" : false,
-  "Guid" : "B8D321B6-745F-434A-9FAA-C6E96E878B8E",
+  "Guid" : "3D431CFF-951A-411D-BC26-F71FB227C12A",
   "Idle Code" : 0,
   "Ansi 10 Color" : {
     "Red Component" : 0.47961589694023132,
@@ -398,7 +398,7 @@
   "Session Close Undo Timeout" : 0,
   "Blur" : false,
   "Vertical Spacing" : 1,
-  "Normal Font" : "FiraCode-Retina 16",
+  "Normal Font" : "JetBrainsMono-Regular 17",
   "Ansi 7 Color" : {
     "Red Component" : 0.93609845638275146,
     "Color Space" : "Calibrated",
@@ -444,7 +444,7 @@
   },
   "Screen" : -1,
   "Initial Use Transparency" : false,
-  "Non Ascii Font" : "FiraCode-Retina 16",
+  "Non Ascii Font" : "JetBrainsMono-Regular 17",
   "Ansi 13 Color" : {
     "Red Component" : 0.66606861352920532,
     "Color Space" : "Calibrated",
