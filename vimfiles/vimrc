@@ -5,20 +5,18 @@ endtry
 filetype plugin on
 highlight SpecialKey ctermfg=grey guifg=grey "tab&space
 
+let NERDTreeShowHidden = 1
+let NERDTreeWinSize = 40
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_no_default_key_mappings = 1
 let loaded_netrwPlugin = 1
-let mapleader="\<Space>"
-let skip_defaults_vim=1
-
+let mapleader = "\<Space>"
+let skip_defaults_vim = 1
 let g:gutentags_ctags_extra_args = [
   \ '--tag-relative=yes',
   \ '--fields=+ailmnS',
   \ '--languages=Python,Go',
 \ ]
-
-let g:vim_markdown_no_default_key_mappings = 1
-let g:vim_markdown_conceal = 0
-
-let NERDTreeShowHidden=1
 
 function! WinToLin() abort "convert line ends
   update
@@ -36,13 +34,14 @@ function! TagsStatus() abort
   endtry
 endfunction
 
-map <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>b :buffers<CR>:buffer<space>
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
+nnoremap <Leader>f :NERDTreeFind<CR>
 nnoremap <Leader>l :call WinToLin()<CR>
+nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>p :%!python -m json.tool<CR>
+nnoremap <Leader>q :bd<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
-noremap <Leader>q :bd<CR>
 
 if !has('nvim')
   if has('win32') || has('win64')
