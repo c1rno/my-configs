@@ -40,7 +40,7 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 nnoremap <Leader>l :call WinToLin()<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>p :%!python -m json.tool<CR>
-nnoremap <Leader>q :bd<CR>
+nnoremap <Leader>q :bp\|bd #<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
 
