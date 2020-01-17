@@ -1,6 +1,9 @@
 [submodule "vimfiles/pack/plugins/start/papercolor-theme"]
 	path = vimfiles/pack/plugins/start/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "vimfiles/pack/plugins/start/nerdtree"]
+	path = vimfiles/pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vimfiles/pack/plugins/start/nerdcommenter"]
 	path = vimfiles/pack/plugins/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -10,9 +13,6 @@
 [submodule "vimfiles/pack/plugins/start/gutentags"]
 	path = vimfiles/pack/plugins/start/gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags.git
-[submodule "vimfiles/pack/plugins/start/nerdtree"]
-	path = vimfiles/pack/plugins/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vimfiles/pack/plugins/start/markdown-vim"]
-	path = vimfiles/pack/plugins/start/markdown-vim
-	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vimfiles/pack/plugins/start/polyglot"]
+	path = vimfiles/pack/plugins/start/polyglot
+	url = https://github.com/sheerun/vim-polyglot.git

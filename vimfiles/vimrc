@@ -7,6 +7,7 @@ highlight SpecialKey ctermfg=grey guifg=grey "tab&space
 
 let NERDTreeShowHidden = 1
 let NERDTreeWinSize = 40
+let g:mustache_operators = 0
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_no_default_key_mappings = 1
 let loaded_netrwPlugin = 1
