@@ -43,6 +43,8 @@ nnoremap <Leader>q :bd<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
 
+autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
+
 if !has('nvim')
   if has('win32') || has('win64')
     set renderoptions^=type:directx
