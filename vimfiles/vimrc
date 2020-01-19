@@ -7,6 +7,7 @@ highlight SpecialKey ctermfg=grey guifg=grey "tab&space
 
 let NERDTreeShowHidden = 1
 let NERDTreeWinSize = 40
+let g:ale_completion_enabled = 1
 let g:mustache_operators = 0
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_no_default_key_mappings = 1
@@ -40,7 +41,7 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 nnoremap <Leader>l :call WinToLin()<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>p :%!python -m json.tool<CR>
-nnoremap <Leader>q :bp\|bd #<CR>
+nnoremap <Leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
 
@@ -78,9 +79,6 @@ if has('syntax')
     set path+=**
   endif
 endif
-if v:version > 700
-  set omnifunc=syntaxcomplete#Complete
-endif
 if has('statusline')
   set laststatus=2
   set statusline=%<%F\ %{TagsStatus()}%h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%{&fileformats}\ %-14.(%l,%c%V%)\ %P
@@ -89,6 +87,13 @@ endif
 if has('patch-8.1.0360')
   set diffopt=internal,algorithm:patience,indent-heuristic
 endif
+try
+  set omnifunc=ale#completion#OmniFunc
+catch
+  if v:version > 700
+    set omnifunc=syntaxcomplete#Complete
+  endif
+endtry
 
 set background=light
 set backspace=indent,eol,start
