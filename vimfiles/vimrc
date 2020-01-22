@@ -5,15 +5,17 @@ endtry
 filetype plugin on
 highlight SpecialKey ctermfg=grey guifg=grey "tab&space
 
-let NERDTreeShowHidden = 1
-let NERDTreeWinSize = 40
+let g:NERDTreeHighlightCursorline = 1
+let g:NERDTreeHijackNetrw = 1
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeWinSize = 40
 let g:ale_completion_enabled = 1
+let g:loaded_netrwPlugin = 1
+let g:mapleader = "\<Space>"
 let g:mustache_operators = 0
+let g:skip_defaults_vim = 1
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_no_default_key_mappings = 1
-let loaded_netrwPlugin = 1
-let mapleader = "\<Space>"
-let skip_defaults_vim = 1
 let g:gutentags_ctags_extra_args = [
   \ '--tag-relative=yes',
   \ '--fields=+ailmnS',
@@ -41,7 +43,7 @@ nnoremap <Leader>f :NERDTreeFind<CR>
 nnoremap <Leader>l :call WinToLin()<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>p :%!python -m json.tool<CR>
-nnoremap <Leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+nnoremap <Leader>q :bprevious<bar>split<bar>bnext<bar>bdelete<CR>
 nnoremap <S-Tab> :bprevious<CR>
 nnoremap <Tab> :bnext<CR>
 
@@ -110,7 +112,7 @@ set list
 set listchars=tab:•·,trail:•,nbsp:¤,extends:»,precedes:«
 set matchtime=1
 set modelines=0
-set mouse= "disable mouse
+set mouse=n
 set nobackup
 set nofoldenable
 set noswapfile

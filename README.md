@@ -1,4 +1,4 @@
-Just a place where I can synchronize my cfgs ower multiple machines
+Just a place where I synchronizing cfgs ower multiple machines
 
 Good font you may find there https://www.jetbrains.com/lp/mono/.
 Good Iterm2 theme here https://github.com/stoeffel/material-iterm.
