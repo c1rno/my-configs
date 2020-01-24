@@ -1,5 +1,5 @@
 DISABLE_AUTO_TITLE="true"
-PROMPT="[%n@%m %~]# "
+PROMPT="%~%(?.. [%?]) %# "
 skip_global_compinit=1
 
 autoload -U colors && colors

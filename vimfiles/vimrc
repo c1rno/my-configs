@@ -19,7 +19,7 @@ let g:vim_markdown_no_default_key_mappings = 1
 let g:gutentags_ctags_extra_args = [
   \ '--tag-relative=yes',
   \ '--fields=+ailmnS',
-  \ '--languages=Python,Go',
+  \ '--languages=Python,PHP,Go',
 \ ]
 
 function! WinToLin() abort "convert line ends
