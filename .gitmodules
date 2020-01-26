@@ -1,12 +1,12 @@
 [submodule "vimfiles/pack/plugins/start/papercolor-theme"]
 	path = vimfiles/pack/plugins/start/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "vimfiles/pack/plugins/start/commentary"]
+	path = vimfiles/pack/plugins/start/commentary
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "vimfiles/pack/plugins/start/nerdtree"]
 	path = vimfiles/pack/plugins/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vimfiles/pack/plugins/start/nerdcommenter"]
-	path = vimfiles/pack/plugins/start/nerdcommenter
-	url = https://github.com/scrooloose/nerdcommenter.git
 [submodule "vimfiles/pack/plugins/start/ale"]
 	path = vimfiles/pack/plugins/start/ale
 	url = https://github.com/w0rp/ale.git

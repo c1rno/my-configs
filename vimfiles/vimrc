@@ -1,6 +1,4 @@
-try
-  silent! colorscheme PaperColor
-endtry
+silent! colorscheme PaperColor
 
 filetype plugin on
 highlight SpecialKey ctermfg=grey guifg=grey "tab&space
@@ -44,8 +42,7 @@ nnoremap <Leader>l :call WinToLin()<CR>
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>p :%!python -m json.tool<CR>
 nnoremap <Leader>q :bprevious<bar>split<bar>bnext<bar>bdelete<CR>
-nnoremap <S-Tab> :bprevious<CR>
-nnoremap <Tab> :bnext<CR>
+nnoremap <Tab> <C-W><C-W>
 
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
 
@@ -96,9 +93,14 @@ catch
     set omnifunc=syntaxcomplete#Complete
   endif
 endtry
+try
+  set commentary "enable commentary emulation in ideavim
+catch
+endtry
 
 set background=light
 set backspace=indent,eol,start
+set belloff=all
 set encoding=utf-8
 set fileencodings=utf-8,cp1251,koi8-r,cp866
 set fileformats=unix
@@ -114,6 +116,7 @@ set matchtime=1
 set modelines=0
 set mouse=n
 set nobackup
+set noerrorbells
 set nofoldenable
 set noswapfile
 set notitle
@@ -128,8 +131,8 @@ set ttimeout
 set ttimeoutlen=50
 set undolevels=32
 set viminfo=""
+set visualbell
 set wildignorecase
 set wildmode=list:longest
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-
