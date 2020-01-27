@@ -1,11 +1,12 @@
 silent! colorscheme PaperColor
 
-filetype plugin on
+filetype plugin indent on
 highlight SpecialKey ctermfg=grey guifg=grey "tab&space
 
 let g:NERDTreeHighlightCursorline = 1
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeStatusline = ''
 let g:NERDTreeWinSize = 40
 let g:ale_completion_enabled = 1
 let g:loaded_netrwPlugin = 1
@@ -36,13 +37,13 @@ function! TagsStatus() abort
   endtry
 endfunction
 
-nnoremap <Leader>b :buffers<CR>:buffer<Space>
-nnoremap <Leader>f :NERDTreeFind<CR>
-nnoremap <Leader>l :call WinToLin()<CR>
-nnoremap <Leader>n :NERDTreeToggle<CR>
-nnoremap <Leader>p :%!python -m json.tool<CR>
-nnoremap <Leader>q :bprevious<bar>split<bar>bnext<bar>bdelete<CR>
-nnoremap <Tab> <C-W><C-W>
+noremap <Leader>b :buffers<CR>:buffer<Space>
+noremap <Leader>f :NERDTreeFind<CR>
+noremap <Leader>l :call WinToLin()<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
+noremap <Leader>p :%!python -m json.tool<CR>
+noremap <Leader>q :bprevious<bar>split<bar>bnext<bar>bdelete<CR>
+noremap <Tab> :wincmd w<CR>
 
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
 
@@ -120,7 +121,6 @@ set noerrorbells
 set nofoldenable
 set noswapfile
 set notitle
-set nowrap
 set nowritebackup
 set shiftwidth=4
 set showbreak=¬
@@ -134,5 +134,7 @@ set viminfo=""
 set visualbell
 set wildignorecase
 set wildmode=list:longest
+set wrap linebreak nolist
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
