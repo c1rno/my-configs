@@ -112,7 +112,7 @@ set list
 set listchars=tab:•·,trail:•,nbsp:¤,extends:¦,precedes:¦
 set matchtime=1
 set modelines=0
-set mouse=n
+set mouse=a
 set nobackup
 set noerrorbells
 set nofoldenable
