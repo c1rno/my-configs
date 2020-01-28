@@ -1,9 +1,5 @@
-silent! colorscheme PaperColor
-
 filetype plugin indent on
-highlight SpecialKey ctermfg=grey guifg=grey "tab&space
 
-let g:NERDTreeHighlightCursorline = 1
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeStatusline = ''

@@ -5,7 +5,7 @@ bindkey ^[[1;2C next # shift right arrow
 bindkey ^[[1;2D prev # shift left arrow
 caption splitonly
 defscrollback 65536
-hardstatus alwayslastline "%{= k}%-w%{= CK}%50>[%n %t]%{-}%+w%<"
+hardstatus alwayslastline "%{= k}%-w%{= KW}%50>[%n %t]%{-}%+w%<"
 maptimeout 5  # http://vim.wikia.com/wiki/GNU_Screen_integration
 nethack on
 nonblock 5
