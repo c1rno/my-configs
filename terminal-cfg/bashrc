@@ -1,3 +1,9 @@
+PROMPT_COMMAND=__prompt_command
+
+__prompt_command() {
+  PS1="\w[$?]# "
+}
+
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export EDITOR=vim
 export GOPATH=$HOME/Documents/workspace/go-lang
@@ -8,15 +14,13 @@ export KUBECONFIG=$HOME/.kube/config.prod:$HOME/.kube/config
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PAGER=less
-export PS1="[\u@\h \w]# "
 export PATH="\
 $GOPATH/bin:/snap/bin:\
 $HOME/Library/Python/2.7/bin:\
-/usr/local/sbin:\
-/usr/local/Cellar/kubernetes-cli/1.15.0/bin:\
 /usr/local/Cellar/golangci-lint/1.20.1/bin:\
 /usr/local/Cellar/nmap/7.80_1/bin:\
 /usr/local/Cellar/universal-ctags/HEAD-e216bb4/bin:\
+/usr/local/sbin:\
 $PATH"
 
 alias cp='cp -v'
@@ -25,4 +29,6 @@ alias less='less -FSRXc'
 alias ll='ls -FGlAhp'
 alias mkdir='mkdir -v'
 alias mv='mv -v'
+
+[[ -e ~/.private_cfg ]] && . ~/.private_cfg
 

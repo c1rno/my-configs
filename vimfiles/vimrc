@@ -110,6 +110,7 @@ set history=5
 set hlsearch
 set incsearch
 set lazyredraw
+set linebreak
 set linespace=0
 set list
 set listchars=tab:•·,trail:•,nbsp:¤,extends:¦,precedes:¦
@@ -134,7 +135,6 @@ set viminfo=""
 set visualbell
 set wildignorecase
 set wildmode=list:longest
-set wrap linebreak nolist
 
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
