@@ -1,9 +1,4 @@
-PROMPT_COMMAND=__prompt_command
-
-__prompt_command() {
-  PS1="\w[$?]# "
-}
-
+PS1="\w[\$?]#\e[0m "
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export EDITOR=vim
 export GOPATH=$HOME/Documents/workspace/go-lang
