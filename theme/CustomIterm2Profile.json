@@ -2,11 +2,11 @@
   "Working Directory" : "\/Users\/ivan",
   "Prompt Before Closing 2" : 2,
   "Selected Text Color" : {
-    "Red Component" : 0.89411764705882357,
+    "Red Component" : 0.94117647058823528,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.89411764705882357,
+    "Blue Component" : 0.94117647058823528,
     "Alpha Component" : 1,
-    "Green Component" : 0.89411764705882357
+    "Green Component" : 0.94117647058823528
   },
   "Rows" : 25,
   "Ansi 11 Color" : {
@@ -343,11 +343,11 @@
   "Window Type" : 15,
   "Use Bright Bold" : true,
   "Cursor Text Color" : {
-    "Red Component" : 0.89411764705882357,
+    "Red Component" : 0.94117647058823528,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.89411764705882357,
+    "Blue Component" : 0.94117647058823528,
     "Alpha Component" : 1,
-    "Green Component" : 0.89411764705882357
+    "Green Component" : 0.94117647058823528
   },
   "Default Bookmark" : "No",
   "Cursor Color" : {
@@ -366,7 +366,7 @@
   },
   "Name" : "CustomProfile",
   "Blinking Cursor" : false,
-  "Guid" : "3D431CFF-951A-411D-BC26-F71FB227C12A",
+  "Guid" : "B9EE26FB-893A-4128-BD02-100BC4B85813",
   "Idle Code" : 0,
   "Ansi 10 Color" : {
     "Red Component" : 0.47961589694023132,
@@ -438,11 +438,11 @@
   },
   "Transparency" : 0,
   "Background Color" : {
-    "Red Component" : 0.89411764705882357,
+    "Red Component" : 0.94117647058823528,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.89411764705882357,
+    "Blue Component" : 0.94117647058823528,
     "Alpha Component" : 1,
-    "Green Component" : 0.89411764705882357
+    "Green Component" : 0.94117647058823528
   },
   "Screen" : -1,
   "Initial Use Transparency" : false,
