@@ -1,5 +1,7 @@
 filetype plugin indent on
 
+highlight Visual term=reverse ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
+
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeStatusline = ''
@@ -78,7 +80,6 @@ endif
 if has('statusline')
   set laststatus=2
   set statusline=%<%F\ %{TagsStatus()}%h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%{&fileformats}\ %-14.(%l,%c%V%)\ %P
-  hi StatusLine ctermbg=black ctermfg=white guibg=black guifg=white
 endif
 if has('patch-8.1.0360')
   set diffopt=internal,algorithm:patience,indent-heuristic
@@ -118,8 +119,10 @@ set noerrorbells
 set nofoldenable
 set noswapfile
 set notitle
+set nowrap
 set nowritebackup
 set shiftwidth=4
+set shortmess=atOI
 set showbreak=¬
 set showmatch
 set tags=tags;/
