@@ -15,6 +15,6 @@ shell -$SHELL
 shelltitle "?"
 startup_message off
 term "screen-256color"
-termcapinfo xterm* ti@:te@
+termcapinfo xterm*|rxvt*|kterm*|Eterm* ti@:te@
 vbell off
 
