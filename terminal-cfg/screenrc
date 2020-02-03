@@ -5,6 +5,7 @@ bindkey ^[[1;2C next # shift right arrow
 bindkey ^[[1;2D prev # shift left arrow
 caption splitonly
 defscrollback 65536
+defutf8 on
 hardstatus alwayslastline "%{= k}%-w%{= KW}%50>[%n %t]%{-}%+w%<"
 maptimeout 5  # http://vim.wikia.com/wiki/GNU_Screen_integration
 nethack on
@@ -14,5 +15,6 @@ shell -$SHELL
 shelltitle "?"
 startup_message off
 term "screen-256color"
+termcapinfo xterm* ti@:te@
 vbell off
 
