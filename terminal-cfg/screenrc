@@ -1,4 +1,4 @@
-attrcolor b ".I"
+altscreen on
 autodetach on # already enabled by default
 bell_msg ""
 bindkey ^[[1;2C next # shift right arrow
