@@ -194,18 +194,18 @@ colors:
   #
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
-  #cursor:
-  #  text: '0xeeeeed'
-  #  cursor: '0x4c4c4b'
+  cursor:
+    text: '0x4c4c4b'
+    cursor: '0xd75e00'
 
   # Selection colors
   #
   # Colors which should be used to draw the selection area. If selection
   # background is unset, selection color will be the inverse of the cell colors.
   # If only text is unset the cell text color will remain the same.
-  #selection:
-  #  text: '0xeaeaea'
-  #  background: '0x404040'
+  selection:
+    text: '0x4c4c4b'
+    background: '0xd75e00'
 
   # Normal colors
   normal:
@@ -219,29 +219,29 @@ colors:
     white:   '0xeeeeed'
 
   # Bright colors
-  #bright:
-  #  black:   '0x666666'
-  #  red:     '0xff3334'
-  #  green:   '0x9ec400'
-  #  yellow:  '0xe7c547'
-  #  blue:    '0x7aa6da'
-  #  magenta: '0xb77ee0'
-  #  cyan:    '0x54ced6'
-  #  white:   '0xffffff'
+  bright:
+    black:   '0x4c4c4b'
+    red:     '0xd6225e'
+    green:   '0x718c00'
+    yellow:  '0xd75e00'
+    blue:    '0x4271ad'
+    magenta: '0x8959a8'
+    cyan:    '0x3e989f'
+    white:   '0xeeeeed'
 
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
   # on the `normal` colors.
-  #dim:
-  #  black:   '0x000000'
-  #  red:     '0x8c3336'
-  #  green:   '0x7a8530'
-  #  yellow:  '0x97822e'
-  #  blue:    '0x506d8f'
-  #  magenta: '0x80638e'
-  #  cyan:    '0x497e7a'
-  #  white:   '0x9a9a9a'
+  dim:
+    black:   '0x4c4c4b'
+    red:     '0xd6225e'
+    green:   '0x718c00'
+    yellow:  '0xd75e00'
+    blue:    '0x4271ad'
+    magenta: '0x8959a8'
+    cyan:    '0x3e989f'
+    white:   '0xeeeeed'
 
   # Indexed Colors
   #
