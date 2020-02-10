@@ -1,10 +1,13 @@
+syntax off
+
 filetype plugin indent on
 
 highlight Visual term=reverse ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
 
 let g:NERDTreeHijackNetrw = 1
+let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
 let g:NERDTreeShowHidden = 1
-let g:NERDTreeStatusline = ''
+let g:NERDTreeStatusline = ""
 let g:NERDTreeWinSize = 40
 let g:ale_completion_enabled = 1
 let g:loaded_netrwPlugin = 1
@@ -14,9 +17,9 @@ let g:skip_defaults_vim = 1
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_no_default_key_mappings = 1
 let g:gutentags_ctags_extra_args = [
-  \ '--tag-relative=yes',
-  \ '--fields=+ailmnS',
-  \ '--languages=Python,PHP,Go',
+  \ "--tag-relative=yes",
+  \ "--fields=+ailmnS",
+  \ "--languages=Python,PHP,Go",
 \ ]
 
 function! WinToLin() abort "convert line ends
@@ -43,45 +46,35 @@ noremap <Leader>p :%!python -m json.tool<CR>
 noremap <Leader>q :bprevious<bar>split<bar>bnext<bar>bdelete<CR>
 noremap <Tab> :wincmd w<CR>
 
-autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
+autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif
 
-if !has('nvim')
-  if has('win32') || has('win64')
+if !has("nvim")
+  if has("win32") || has("win64")
     set renderoptions^=type:directx
   else
     set term=$TERM "Make arrow and other keys work
   endif
 endif
-if &term == 'xterm' || &term == 'screen'
+if &term == "xterm" || &term == "screen"
   set t_Co=256 "Enable 256 colors to stop the CSApprox warning and make xterm vim shine
 endif
-if has('clipboard')
+if has("clipboard")
   set clipboard^=unnamed "On mac and Windows, use * register for copy-paste
-  if has('unnamedplus')  "When possible use + register for copy-paste
+  if has("unnamedplus")  "When possible use + register for copy-paste
     set clipboard^=unnamedplus
   endif
 endif
-if exists('&ttyfast')
+if exists("&ttyfast")
   set ttyfast
 endif
-if has('termguicolors')
+if has("termguicolors")
   set notermguicolors
 endif
-if has('syntax')
-  if &diff
-    syntax off
-  else
-    syntax on
-    syntax sync minlines=256
-    set synmaxcol=256 "performance optimization
-    set path+=**
-  endif
-endif
-if has('statusline')
+if has("statusline")
   set laststatus=2
   set statusline=%<%F\ %{TagsStatus()}%h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%{&fileformats}\ %-14.(%l,%c%V%)\ %P
 endif
-if has('patch-8.1.0360')
+if has("patch-8.1.0360")
   set diffopt=internal,algorithm:patience,indent-heuristic
 endif
 try
