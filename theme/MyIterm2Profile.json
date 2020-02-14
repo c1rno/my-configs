@@ -1,13 +1,13 @@
 {
-  "ASCII Ligatures" : false,
+  "Thin Strokes" : 0,
   "Working Directory" : "\/Users\/ivan",
   "Prompt Before Closing 2" : 2,
   "Selected Text Color" : {
-    "Red Component" : 1,
+    "Red Component" : 0.20000000000000001,
     "Color Space" : "sRGB",
-    "Blue Component" : 1,
+    "Blue Component" : 0.20000000000000001,
     "Alpha Component" : 1,
-    "Green Component" : 1
+    "Green Component" : 0.20000000000000001
   },
   "Rows" : 25,
   "Ansi 11 Color" : {
@@ -28,11 +28,11 @@
   "Right Option Key Sends" : 0,
   "Character Encoding" : 4,
   "Selection Color" : {
-    "Red Component" : 0.20000000000000001,
+    "Red Component" : 1,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.20000000000000001,
+    "Blue Component" : 0,
     "Alpha Component" : 1,
-    "Green Component" : 0.20000000000000001
+    "Green Component" : 0.5490196078431373
   },
   "Show Mark Indicators" : false,
   "Mouse Reporting" : true,
@@ -330,7 +330,7 @@
     "Color Space" : "sRGB",
     "Blue Component" : 0.23529411764705882,
     "Alpha Component" : 1,
-    "Green Component" : 0.078431372549019607
+    "Green Component" : 0.078431372549019593
   },
   "Use Bold Font" : true,
   "Silence Bell" : true,
@@ -363,7 +363,7 @@
     "Color Space" : "sRGB",
     "Blue Component" : 0.23529411764705882,
     "Alpha Component" : 1,
-    "Green Component" : 0.078431372549019607
+    "Green Component" : 0.078431372549019593
   },
   "Name" : "MyProfile",
   "Blinking Cursor" : false,
@@ -388,9 +388,10 @@
     "Color Space" : "sRGB",
     "Blue Component" : 0.2352941176470589,
     "Alpha Component" : 1,
-    "Green Component" : 0.078431372549019537
+    "Green Component" : 0.078431372549019523
   },
   "Ambiguous Double Width" : false,
+  "Background Image Mode" : 0,
   "Ansi 0 Color" : {
     "Red Component" : 0.20000000000000001,
     "Color Space" : "sRGB",
@@ -400,8 +401,8 @@
   },
   "Session Close Undo Timeout" : 0,
   "Blur" : false,
-  "Normal Font" : "JetBrainsMonoNerdFontComplete-Regular 17",
   "Vertical Spacing" : 1,
+  "Normal Font" : "JetBrainsMonoNerdFontComplete-Regular 17",
   "Ansi 7 Color" : {
     "Red Component" : 1,
     "Color Space" : "sRGB",
@@ -414,6 +415,7 @@
   "Command" : "",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
+  "Reduce Flicker" : true,
   "Option Key Sends" : 0,
   "Minimum Contrast" : 0,
   "Ansi 15 Color" : {
@@ -452,6 +454,7 @@
   "Use Tab Color" : false,
   "Columns" : 80,
   "Visual Bell" : true,
+  "ASCII Ligatures" : false,
   "Custom Directory" : "No",
   "Ansi 5 Color" : {
     "Red Component" : 0.50196078431372548,
@@ -459,6 +462,5 @@
     "Blue Component" : 0.50196078431372548,
     "Alpha Component" : 1,
     "Green Component" : 0
-  },
-  "Thin Strokes" : 0
+  }
 }
