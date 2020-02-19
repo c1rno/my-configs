@@ -1,58 +1,18 @@
+export ZSH=$HOME/.ohmyzsh
+
+CASE_SENSITIVE="false"
+COMPLETION_WAITING_DOTS="true"
 DISABLE_AUTO_TITLE="true"
+
+plugins=(
+    docker
+    docker-compose
+    helm
+    kubectl
+    zsh_reload
+)
+source $ZSH/oh-my-zsh.sh
 PROMPT="%~%(?.. [%?]) %# "
-skip_global_compinit=1
-
-autoload -U colors && colors
-
-# Configure stupid competition
-setopt ALWAYS_TO_END
-setopt AUTO_LIST
-setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_SPACE
-setopt HIST_REDUCE_BLANKS
-setopt INTERACTIVE_COMMENTS
-setopt LIST_AMBIGUOUS
-unsetopt AUTO_MENU
-unsetopt BEEP
-unsetopt MENU_COMPLETE
-unsetopt PROMPT_SP
-
-bindkey -e
-# Explicitly enable reverse search
-bindkey '^R' history-incremental-search-backward
-
-#### https://hellricer.github.io/2019/05/21/ctrl-arrows-in-terminal.html
-### and use xterm keys in Iterm2 + tmux
-### ctrl+arrows
-bindkey "\e[1;5C" forward-word
-bindkey "\e[1;5D" backward-word
-bindkey "\eOc" forward-word
-bindkey "\eOd" backward-word
-
-### ctrl+delete
-bindkey "\e[3;5~" kill-word
-bindkey "\e[3^" kill-word
-
-### ctrl+backspace
-bindkey '^H' backward-kill-word
-
-### ctrl+shift+delete
-bindkey "\e[3;6~" kill-line
-bindkey "\e[3@" kill-line
-
-### https://wiki.archlinux.org/index.php/Home_and_End_keys_not_working
-### home (mac: fn+left-arrow)
-bindkey "\e[1~" beginning-of-line
-bindkey "\e[7~" beginning-of-line
-bindkey "\eOH" beginning-of-line
-bindkey "\e[H" beginning-of-line
-
-### end (mac: fn+right-arrow)
-bindkey "\e[F" end-of-line
-bindkey "\eOF" end-of-line
-bindkey "\e[8~" end-of-line
-bindkey "\e[4~" end-of-line
-####
 
 # User configuration
 export EDITOR=vim
@@ -65,20 +25,58 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PAGER=less
 export PATH="\
-$GOPATH/bin:/snap/bin:\
+$GOPATH/bin:\
 $HOME/Library/Python/2.7/bin:\
+/snap/bin:\
 /usr/local/Cellar/golangci-lint/1.20.1/bin:\
 /usr/local/Cellar/nmap/7.80_1/bin:\
 /usr/local/Cellar/universal-ctags/HEAD-e216bb4/bin:\
 /usr/local/sbin:\
 $PATH"
 
-alias cp='cp -v'
+alias cp='rsync -aq'
 alias grep='grep --color=auto'
 alias less='less -FSRXc'
 alias ll='ls -FGlAhp'
 alias mkdir='mkdir -v'
 alias mv='mv -v'
+
+bindkey -e
+# Explicitly enable reverse search
+bindkey '^R' history-incremental-search-backward
+
+# https://hellricer.github.io/2019/05/21/ctrl-arrows-in-terminal.html
+# and use xterm keys in Iterm2 + tmux
+# ctrl+arrows
+bindkey "\e[1;5C" forward-word
+bindkey "\e[1;5D" backward-word
+bindkey "\eOc" forward-word
+bindkey "\eOd" backward-word
+
+# ctrl+delete
+bindkey "\e[3;5~" kill-word
+bindkey "\e[3^" kill-word
+
+# ctrl+backspace
+bindkey '^H' backward-kill-word
+
+# ctrl+shift+delete
+bindkey "\e[3;6~" kill-line
+bindkey "\e[3@" kill-line
+
+# https://wiki.archlinux.org/index.php/Home_and_End_keys_not_working
+# home (mac: fn+left-arrow)
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[7~" beginning-of-line
+bindkey "\eOH" beginning-of-line
+bindkey "\e[H" beginning-of-line
+
+# end (mac: fn+right-arrow)
+bindkey "\e[F" end-of-line
+bindkey "\eOF" end-of-line
+bindkey "\e[8~" end-of-line
+bindkey "\e[4~" end-of-line
+#
 
 [[ -e ~/.private_cfg ]] && emulate sh -c 'source ~/.private_cfg'
 

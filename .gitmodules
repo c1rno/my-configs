@@ -13,3 +13,6 @@
 [submodule "vimfiles/pack/plugins/start/polyglot"]
 	path = vimfiles/pack/plugins/start/polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "terminal-cfg/ohmyzsh"]
+	path = terminal-cfg/ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
