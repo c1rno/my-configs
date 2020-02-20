@@ -34,7 +34,7 @@ $HOME/Library/Python/2.7/bin:\
 /usr/local/sbin:\
 $PATH"
 
-alias cp='rsync -aq'
+alias cp='cp -v'
 alias grep='grep --color=auto'
 alias less='less -FSRXc'
 alias ll='ls -FGlAhp'
