@@ -12,7 +12,8 @@
     "editor.copyWithSyntaxHighlighting": false,
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": true,
-    "editor.cursorStyle": "block",
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 3,
     "editor.dragAndDrop": false,
     "editor.emptySelectionClipboard": false,
     "editor.folding": false,
@@ -73,7 +74,6 @@
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.hovers.enabled": false,
     "gitlens.mode.statusBar.enabled": false,
-    "gitlens.settings.mode": "advanced",
     "gitlens.statusBar.enabled": false,
     "gitlens.views.compare.avatars": false,
     "gitlens.views.fileHistory.avatars": false,
@@ -81,6 +81,7 @@
     "gitlens.views.repositories.autoRefresh": false,
     "gitlens.views.repositories.autoReveal": false,
     "gitlens.views.repositories.avatars": false,
+    "gitlens.views.repositories.files.layout": "list",
     "gitlens.views.search.avatars": false,
     "go.lintTool": "golangci-lint",
     "go.useLanguageServer": true,
@@ -115,8 +116,11 @@
     "terminal.integrated.windowsEnableConpty": true,
     "typescript.tsserver.maxTsServerMemory": 2048,
     "update.showReleaseNotes": false,
+    "vim.history": 10,
+    "vim.leader": "<space>",
+    "vim.textwidth": 120,
+    "vim.useSystemClipboard": true,
     "vsintellicode.modify.editor.suggestSelection": "disabled",
-    "window.autoDetectHighContrast": false,
     "window.nativeTabs": true,
     "window.newWindowDimensions": "fullscreen",
     "window.openFilesInNewWindow": "off",
@@ -142,63 +146,16 @@
     "workbench.settings.editor": "json",
     "workbench.settings.enableNaturalLanguageSearch": false,
     "workbench.startupEditor": "none",
-    "workbench.statusBar.feedback.visible": false,
     "workbench.statusBar.visible": true,
     "workbench.tips.enabled": false,
-    "yaml.format.enable": true,
-    "yaml.hover": false,
-    "terminal.integrated.env.windows": {
-        "PATH": "${env:PATH};C:\\Program Files\\Cmder\\vendor\\git-for-windows\\bin"
-    },
+
     "files.watcherExclude": {
         "**/.git": true,
         "**/node_modules": true,
         "**/vendor": true,
         "**/.idea": true,
     },
-    "gitlens.recentChanges.highlight.locations": [
-        "gutter"
-    ],
-    "go.lintFlags": [
-        "--exclude=exported \\w+ (\\S*['.]*)([a-zA-Z'.*]*) should have comment or be unexported"
-    ],
-    "workbench.colorCustomizations": {
-        "statusBar.background": "#005f5f",
-        "statusBar.noFolderBackground": "#005f5f",
-        "statusBar.debuggingBackground": "#005f5f"
-    },
-    "gitlens.menus": {
-        "editor": {
-            "blame": false,
-            "clipboard": false,
-            "compare": true,
-            "details": false,
-            "history": false,
-            "remote": false
-        },
-        "editorGroup": {
-            "blame": true,
-            "compare": true
-        },
-        "editorTab": false,
-        "explorer": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": true
-        },
-        "scmGroup": {
-            "compare": true,
-            "openClose": true,
-            "stash": true,
-            "stashInline": true
-        },
-        "scmItem": {
-            "clipboard": true,
-            "compare": true,
-            "history": true,
-            "remote": true,
-            "stash": true
-        }
-    }
+    // "terminal.integrated.env.windows": {
+    //     "PATH": "${env:PATH};C:\\Program Files\\Cmder\\vendor\\git-for-windows\\bin"
+    // }
 }

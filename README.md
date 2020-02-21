@@ -17,7 +17,7 @@ Just my unrelated notes:
 - if you use screen on Mac, install it from brew, default not supported utf8
 - do not forget `brew analytics off`
 - from [doc](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent): `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
-- from [another-doc](https://blog.g3rt.nl/upgrade-your-ssh-keys.html): `ssh-keygen -o -a 100 -t ed25519` (need read more)
+- from [another-doc](https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54): `ssh-keygen -o -a 100 -t ed25519 -C your_email@example.com` (need read more)
 - for docker do not forget enable `build_kit`
 - really usefull cmd `docker system prune -a --volumes`
 - [tricky docker endpoint](https://github.com/bufferings/docker-access-host/blob/master/docker-entrypoint.sh)
