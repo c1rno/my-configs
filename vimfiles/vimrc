@@ -3,6 +3,7 @@ syntax off
 filetype plugin indent on
 
 highlight Visual ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
+highlight Search ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
 
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
