@@ -1288,7 +1288,7 @@
 	wczV3N8AAAAAAAABAQAAAAAAAAAcAAAAAAAAAAAAAAAAAAAA6A==
 	</data>
 	<key>FontAntialias</key>
-	<false/>
+	<true/>
 	<key>FontWidthSpacing</key>
 	<integer>1</integer>
 	<key>ProfileCurrentVersion</key>
