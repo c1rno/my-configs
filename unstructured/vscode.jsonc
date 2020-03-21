@@ -105,7 +105,6 @@
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, monospace",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.lineHeight": 1,
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
     "terminal.integrated.windowsEnableConpty": true,
     "typescript.tsserver.maxTsServerMemory": 2048,
     "update.showReleaseNotes": false,

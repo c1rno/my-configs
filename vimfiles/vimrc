@@ -90,6 +90,7 @@ set fileformats=unix
 set hidden
 set history=5
 set hlsearch
+set ignorecase
 set incsearch
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set lazyredraw
@@ -112,6 +113,7 @@ set shiftwidth=4
 set shortmess=atOI
 set showbreak=¬
 set showmatch
+set smartcase
 set t_Co=256 "Enable 256 colors to stop the CSApprox warning and make xterm vim shine
 set tags=tags;/
 set textwidth=0
