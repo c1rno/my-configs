@@ -31,6 +31,7 @@
     "editor.showFoldingControls": "always",
     "editor.smoothScrolling": false,
     "editor.snippetSuggestions": "top",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestOnTriggerCharacters": false,
     "editor.suggestSelection": "first",
     "editor.trimAutoWhitespace": false,
