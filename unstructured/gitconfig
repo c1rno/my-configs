@@ -1,6 +1,6 @@
 [alias]
 	df = difftool
-	lg = log --pretty=format:'[%C(auto,red)%h%Creset][%C(auto,green)%cd%Creset][%C(auto,blue)%aE%Creset]: %s' --graph --date=short --decorate=short
+	lg = log --pretty=format:'[%C(auto,red)%h%Creset][%C(auto,green)%cd%Creset][%C(auto,blue)%aE%Creset]: %s' --graph --date=short --decorate=short --abbrev=7
 	st = status -uno
 [core]
 	autocrlf = false

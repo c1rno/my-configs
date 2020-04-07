@@ -44,7 +44,7 @@ noremap <Leader>f :NERDTreeFind<CR>
 noremap <Leader>l :call WinToLin()<CR>
 noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>p :%!python -m json.tool<CR>
-noremap <Leader>q :bprevious<bar>split<bar>bnext<bar>bdelete<CR>
+noremap <Leader>q :bdelete<CR> "noremap <Leader>q :bprevious<bar>split<bar>bnext<bar>bdelete<CR> - workaround for nerdtree
 noremap <Tab> :wincmd w<CR>
 
 autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif
@@ -65,9 +65,6 @@ endif
 if has("statusline")
   set laststatus=2
   set statusline=%<%F\ %{TagsStatus()}%h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%{&fileformats}\ %-14.(%l,%c%V%)\ %P
-endif
-if has("patch-8.1.0360")
-  set diffopt=internal,algorithm:patience,indent-heuristic
 endif
 try
   set omnifunc=ale#completion#OmniFunc
