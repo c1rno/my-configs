@@ -109,7 +109,7 @@
     "window.openFoldersInNewWindow": "off",
     "window.openWithoutArgumentsInNewWindow": "off",
     "window.title": "${rootName}",
-    "workbench.colorTheme": "Light High Contrast Theme",
+    "workbench.colorTheme": "PaperColor Redux",
     "workbench.commandPalette.history": 5,
     "workbench.editor.enablePreview": false,
     "workbench.editor.enablePreviewFromQuickOpen": false,
