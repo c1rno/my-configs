@@ -83,5 +83,5 @@ bindkey "\e[4~" end-of-line
 #
 
 [[ -e ~/.private_cfg ]] && emulate sh -c 'source ~/.private_cfg'
-eval "$(starship init zsh)"
+eval "$(starship init zsh 2>/dev/null)"
 
