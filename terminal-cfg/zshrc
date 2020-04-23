@@ -6,7 +6,6 @@ ZSH_THEME=""
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt hist_reduce_blanks
-#setopt share_history
 
 plugins=(
     docker
@@ -17,6 +16,7 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 PROMPT="%~%(?.. [%?]) %# "
+unsetopt share_history
 
 # User configuration
 export EDITOR=vim
@@ -83,4 +83,5 @@ bindkey "\e[4~" end-of-line
 #
 
 [[ -e ~/.private_cfg ]] && emulate sh -c 'source ~/.private_cfg'
+eval "$(starship init zsh)"
 
