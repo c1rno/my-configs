@@ -5,9 +5,25 @@ filetype plugin indent on
 highlight Search ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
 highlight Visual ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
 
+let g:NERDTreeHijackNetrw = 1
+let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeStatusline = ""
+let g:NERDTreeWinSize = 40
+let g:ale_completion_enabled = 1
+let g:ale_completion_max_suggestions = 5
+let g:ale_history_enabled = 0
 let g:loaded_netrwPlugin = 1
 let g:mapleader = "\<Space>"
 let g:skip_defaults_vim = 1
+let g:ale_linters = {
+  \'go': ['gopls'],
+  \'python': ['pyls'],
+\}
+let b:ale_fixers = {
+  \'go': ['goimports'],
+  \'python': ['black'],
+\}
 
 function! WinToLin() abort "convert line ends
   update
@@ -17,11 +33,19 @@ function! WinToLin() abort "convert line ends
   set nobomb
 endfunction
 
+nnoremap <C-[> <Nop>
+nnoremap <C-]> <Nop>
+noremap <Leader>[ :ALEFindReferences<CR>
+noremap <Leader>] :ALEGoToDefinition<CR>
 noremap <Leader>b :buffers<CR>:buffer<Space>
-noremap <Leader>l :call WinToLin()<CR>
+noremap <Leader>f :NERDTreeFind<CR>
+noremap <Leader>l :ALEFix<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>p :%!python -m json.tool<CR>
 noremap <Leader>q :bdelete<CR> "noremap <Leader>q :bprevious<bar>split<bar>bnext<bar>bdelete<CR> - workaround for nerdtree
 noremap <Tab> :wincmd w<CR>
+
+autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif
 
 if has("clipboard")
   set clipboard^=unnamed "On mac and Windows, use * register for copy-paste
@@ -33,6 +57,13 @@ if has("statusline")
   set laststatus=2
   set statusline=%<%F\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%{&fileformats}\ %-14.(%l,%c%V%)\ %P
 endif
+try
+  set omnifunc=ale#completion#OmniFunc
+catch
+  if v:version > 700
+    set omnifunc=syntaxcomplete#Complete
+  endif
+endtry
 
 set background=light
 set backspace=indent,eol,start
@@ -68,12 +99,11 @@ set showbreak=¬
 set showmatch
 set smartcase
 set t_Co=256 "Enable 256 colors to stop the CSApprox warning and make xterm vim shine
-set tags=tags;/
 set textwidth=0
 set ttimeout
 set ttimeoutlen=50
 set ttyfast
-set undolevels=32
+set undolevels=8
 set viminfo=""
 set visualbell
 set wildignorecase
