@@ -25,22 +25,13 @@ let b:ale_fixers = {
   \'python': ['black'],
 \}
 
-function! WinToLin() abort "convert line ends
-  update
-  e ++ff=dos
-  setlocal ff=unix
-  set fileencoding=utf8
-  set nobomb
-endfunction
-
 nnoremap <C-[> :ALEFindReferences<CR>
 nnoremap <C-]> :ALEGoToDefinition<CR>
 noremap <Leader>b :buffers<CR>:buffer<Space>
 noremap <Leader>f :NERDTreeFind<CR>
 noremap <Leader>l :ALEFix<CR>
 noremap <Leader>n :NERDTreeToggle<CR>
-noremap <Leader>p :%!python -m json.tool<CR>
-noremap <Leader>q :bdelete<CR> "noremap <Leader>q :bprevious<bar>split<bar>bnext<bar>bdelete<CR> - workaround for nerdtree
+noremap <Leader>q :bdelete<CR>
 noremap <Tab> :wincmd w<CR>
 
 autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif
@@ -87,7 +78,6 @@ set nobackup
 set noerrorbells
 set nofoldenable
 set noswapfile
-set notermguicolors
 set notitle
 set nowrap
 set nowritebackup
