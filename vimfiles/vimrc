@@ -10,18 +10,9 @@ let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeStatusline = ""
 let g:NERDTreeWinSize = 40
-let g:ale_completion_enabled = 1
 let g:loaded_netrwPlugin = 1
 let g:mapleader = "\<Space>"
-let g:mustache_operators = 0
 let g:skip_defaults_vim = 1
-let g:vim_markdown_conceal = 0
-let g:vim_markdown_no_default_key_mappings = 1
-let g:gutentags_ctags_extra_args = [
-  \ "--fields=+ailmnS",
-  \ "--languages=Python,PHP,Go",
-  \ "--tag-relative=yes",
-\ ]
 
 function! WinToLin() abort "convert line ends
   update

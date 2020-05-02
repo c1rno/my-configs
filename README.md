@@ -11,7 +11,7 @@ Repo-related things:
 - Update `git submodule update --remote --merge` || `git submodule update --init`
 - Manage (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) || `git rm [--cached] <path to plugin>`
 - Manage `git submodule add https://github.com/<plugin name> vimfiles\pack\plugins\start\<plugin name>`
-- Dependency for vim https://github.com/universal-ctags/ctags
+- try LSP, with https://github.com/neovim/nvim-lsp.git (on nvim v4 it fails)
 
 Just my unrelated notes:
 - if you use screen on Mac, install it from brew, default not supported utf8
