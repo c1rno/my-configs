@@ -45,6 +45,10 @@ alias ll='ls -FGlAhp'
 alias mkdir='mkdir -v'
 alias mv='mv -v'
 
+nvim -v &>/dev/null
+[[ $? -eq 0 ]] && alias vim='nvim'
+
+
 bindkey -e
 # Explicitly enable reverse search
 bindkey '^R' history-incremental-search-backward

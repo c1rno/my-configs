@@ -5,9 +5,23 @@ filetype plugin indent on
 highlight Search ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
 highlight Visual ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
 
+let g:NERDTreeHijackNetrw = 1
+let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeStatusline = ""
+let g:NERDTreeWinSize = 40
+let g:ale_completion_enabled = 1
 let g:loaded_netrwPlugin = 1
 let g:mapleader = "\<Space>"
+let g:mustache_operators = 0
 let g:skip_defaults_vim = 1
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_no_default_key_mappings = 1
+let g:gutentags_ctags_extra_args = [
+  \ "--fields=+ailmnS",
+  \ "--languages=Python,PHP,Go",
+  \ "--tag-relative=yes",
+\ ]
 
 function! WinToLin() abort "convert line ends
   update
@@ -18,10 +32,14 @@ function! WinToLin() abort "convert line ends
 endfunction
 
 noremap <Leader>b :buffers<CR>:buffer<Space>
+noremap <Leader>f :NERDTreeFind<CR>
 noremap <Leader>l :call WinToLin()<CR>
+noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>p :%!python -m json.tool<CR>
 noremap <Leader>q :bdelete<CR> "noremap <Leader>q :bprevious<bar>split<bar>bnext<bar>bdelete<CR> - workaround for nerdtree
 noremap <Tab> :wincmd w<CR>
+
+autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif
 
 if has("clipboard")
   set clipboard^=unnamed "On mac and Windows, use * register for copy-paste
