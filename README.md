@@ -1,8 +1,7 @@
 Just a place where I synchronizing my cfgs ower multiple machines
 
 Good font you may be found here https://github.com/ryanoasis/nerd-fonts/releases: `brew tap homebrew/cask-fonts && brew cask install font-jetbrainsmono-nerd-font`
-(Alacritty)[https://github.com/alacritty/alacritty]: `brew cask install alacritty`
-or for Iterm2 good theme may be found here https://github.com/aseom/dotfiles/blob/master/osx/iterm2/papercolor-light.itermcolors
+For Iterm2 good theme may be found here https://github.com/aseom/dotfiles/blob/master/osx/iterm2/papercolor-light.itermcolors
 
 VIM setup working with 8+ version and neovim
 
@@ -11,7 +10,7 @@ Repo-related things:
 - Update `git submodule update --remote --merge` || `git submodule update --init`
 - Manage (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) || `git rm [--cached] <path to plugin>`
 - Manage `git submodule add https://github.com/<plugin name> vimfiles\pack\plugins\start\<plugin name>`
-- try LSP, with https://github.com/neovim/nvim-lsp.git (on nvim v4 it fails)
+- don't forget about LSP for vim completition and navigation
 
 Just my unrelated notes:
 - if you use screen on Mac, install it from brew, default not supported utf8

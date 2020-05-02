@@ -10,9 +10,16 @@ let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeStatusline = ""
 let g:NERDTreeWinSize = 40
+let g:ale_completion_enabled = 1
+let g:ale_completion_max_suggestions = 5
+let g:ale_history_enabled = 0
 let g:loaded_netrwPlugin = 1
 let g:mapleader = "\<Space>"
 let g:skip_defaults_vim = 1
+let g:ale_linters = {
+  \'go': ['gopls'],
+  \'python': ['pyls'],
+\}
 
 function! WinToLin() abort "convert line ends
   update
@@ -22,6 +29,8 @@ function! WinToLin() abort "convert line ends
   set nobomb
 endfunction
 
+nnoremap <C-[> :ALEFindReferences<CR>
+nnoremap <C-]> :ALEGoToDefinition<CR>
 noremap <Leader>b :buffers<CR>:buffer<Space>
 noremap <Leader>f :NERDTreeFind<CR>
 noremap <Leader>l :call WinToLin()<CR>
@@ -42,6 +51,13 @@ if has("statusline")
   set laststatus=2
   set statusline=%<%F\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%{&fileformats}\ %-14.(%l,%c%V%)\ %P
 endif
+try
+  set omnifunc=ale#completion#OmniFunc
+catch
+  if v:version > 700
+    set omnifunc=syntaxcomplete#Complete
+  endif
+endtry
 
 set background=light
 set backspace=indent,eol,start
@@ -77,12 +93,11 @@ set showbreak=¬
 set showmatch
 set smartcase
 set t_Co=256 "Enable 256 colors to stop the CSApprox warning and make xterm vim shine
-set tags=tags;/
 set textwidth=0
 set ttimeout
 set ttimeoutlen=50
 set ttyfast
-set undolevels=32
+set undolevels=8
 set viminfo=""
 set visualbell
 set wildignorecase
