@@ -86,6 +86,7 @@
     "outline.problems.badges": false,
     "outline.problems.colors": false,
     "outline.problems.enabled": false,
+    "output.smartScroll.enabled": false,
     "php.memoryLimit": "1024M",
     "php.suggest.basic": false,
     "python.dataScience.enabled": false,
