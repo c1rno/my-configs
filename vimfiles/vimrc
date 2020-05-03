@@ -2,8 +2,9 @@ syntax off
 
 filetype plugin indent on
 
-highlight Search ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
-highlight Visual ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
+highlight PmenuSel ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
+highlight Search   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
+highlight Visual   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
 
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
@@ -20,13 +21,17 @@ let g:ale_linters = {
   \'go': ['gopls'],
   \'python': ['pyls'],
 \}
-let b:ale_fixers = {
-  \'go': ['goimports'],
+let g:ale_fixers = {
+  \'go': ['goimports', 'gofmt'],
   \'python': ['black'],
 \}
 
-nnoremap <C-[> :ALEFindReferences<CR>
-nnoremap <C-]> :ALEGoToDefinition<CR>
+nnoremap <Space> <NOP>
+nnoremap q: <NOP> "disable noise features
+nnoremap q? <NOP>
+nnoremap qq <NOP>
+noremap <Leader>[ :ALEFindReferences<CR>
+noremap <Leader>] :ALEGoToDefinition<CR>
 noremap <Leader>b :buffers<CR>:buffer<Space>
 noremap <Leader>f :NERDTreeFind<CR>
 noremap <Leader>l :ALEFix<CR>
@@ -46,13 +51,6 @@ if has("statusline")
   set laststatus=2
   set statusline=%<%F\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%{&fileformats}\ %-14.(%l,%c%V%)\ %P
 endif
-try
-  set omnifunc=ale#completion#OmniFunc
-catch
-  if v:version > 700
-    set omnifunc=syntaxcomplete#Complete
-  endif
-endtry
 
 set background=light
 set backspace=indent,eol,start
@@ -65,7 +63,6 @@ set history=5
 set hlsearch
 set ignorecase
 set incsearch
-set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 set lazyredraw
 set linebreak
 set linespace=0
@@ -82,7 +79,7 @@ set notitle
 set nowrap
 set nowritebackup
 set shiftwidth=4
-set shortmess=atOI
+set shortmess=atI
 set showbreak=¬
 set showmatch
 set smartcase

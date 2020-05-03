@@ -1,6 +1,4 @@
 {
-"Profiles": [
-{
   "Ansi 5 Color" : {
     "Green Component" : 0.25738272070884705,
     "Red Component" : 0.45855110883712769,
@@ -332,15 +330,19 @@
   "Window Type" : 15,
   "Use Bright Bold" : false,
   "Cursor Text Color" : {
-    "Green Component" : 1,
     "Red Component" : 1,
-    "Blue Component" : 1
+    "Color Space" : "sRGB",
+    "Blue Component" : 1,
+    "Alpha Component" : 1,
+    "Green Component" : 1
   },
   "Default Bookmark" : "No",
   "Cursor Color" : {
-    "Green Component" : 0,
-    "Red Component" : 0,
-    "Blue Component" : 0
+    "Red Component" : 1,
+    "Color Space" : "sRGB",
+    "Blue Component" : 0.57647058823529407,
+    "Alpha Component" : 1,
+    "Green Component" : 0.078431372549019607
   },
   "Ansi 1 Color" : {
     "Green Component" : 0,
@@ -368,6 +370,7 @@
     "Alpha Component" : 0.5,
     "Green Component" : 0.1491314172744751
   },
+  "Smart Cursor Color" : false,
   "Ambiguous Double Width" : false,
   "Background Image Mode" : 0,
   "Cursor Type" : 2,
@@ -437,6 +440,4 @@
   "ASCII Ligatures" : false,
   "Thin Strokes" : 0,
   "Custom Directory" : "No"
-}
-]
 }

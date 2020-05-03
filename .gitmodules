@@ -1,3 +1,6 @@
+[submodule "vimfiles/pack/plugins/start/editorconfig"]
+	path = vimfiles/pack/plugins/start/editorconfig
+	url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "vimfiles/pack/plugins/start/commentary"]
 	path = vimfiles/pack/plugins/start/commentary
 	url = https://github.com/tpope/vim-commentary.git
