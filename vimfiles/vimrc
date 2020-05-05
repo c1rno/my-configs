@@ -14,6 +14,8 @@ let g:NERDTreeWinSize = 40
 let g:ale_completion_enabled = 1
 let g:ale_completion_max_suggestions = 5
 let g:ale_history_enabled = 0
+let g:ctrlp_map = ''
+let g:ctrlp_match_current_file = 1
 let g:loaded_netrwPlugin = 1
 let g:mapleader = "\<Space>"
 let g:skip_defaults_vim = 1
@@ -26,13 +28,14 @@ let g:ale_fixers = {
   \'python': ['black'],
 \}
 
+nnoremap <Leader>t <C-o>
 nnoremap <Space> <NOP>
 nnoremap q: <NOP> "disable noise features
 nnoremap q? <NOP>
 nnoremap qq <NOP>
 noremap <Leader>[ :ALEFindReferences<CR>
 noremap <Leader>] :ALEGoToDefinition<CR>
-noremap <Leader>b :buffers<CR>:buffer<Space>
+noremap <Leader>b :CtrlPBuffer<CR> "<C-f> switch mode
 noremap <Leader>f :NERDTreeFind<CR>
 noremap <Leader>l :ALEFix<CR>
 noremap <Leader>n :NERDTreeToggle<CR>
@@ -41,6 +44,19 @@ noremap <Tab> :wincmd w<CR>
 
 autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif
 
+function! LinterStatus() abort
+  try
+    let l:counts = ale#statusline#Count(bufnr(''))
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+    return l:counts.total == 0 ? '' : printf('E:%d W:%d', l:all_errors, l:all_non_errors)
+  catch
+    return ''
+  endtry
+endfunction
+if !has("nvim")
+  set term=$TERM "Make arrow and other keys work
+endif
 if has("clipboard")
   set clipboard^=unnamed "On mac and Windows, use * register for copy-paste
   if has("unnamedplus")  "When possible use + register for copy-paste
@@ -49,7 +65,7 @@ if has("clipboard")
 endif
 if has("statusline")
   set laststatus=2
-  set statusline=%<%F\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%{&fileformats}\ %-14.(%l,%c%V%)\ %P
+  set statusline=%<%f\ \%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\"}%h%r%m%=\%{LinterStatus()}\ %l\:%P
 endif
 
 set background=light
