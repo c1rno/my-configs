@@ -85,7 +85,6 @@ set linespace=0
 set list
 set listchars=tab:•·,trail:•,nbsp:¤,extends:¦,precedes:¦
 set matchtime=1
-set modelines=0
 set mouse=a
 set nobackup
 set noerrorbells
@@ -94,13 +93,13 @@ set noswapfile
 set notitle
 set nowrap
 set nowritebackup
-set shiftwidth=4
 set shortmess=atI
 set showbreak=¬
 set showmatch
 set smartcase
+set splitbelow
+set splitright
 set t_Co=256 "Enable 256 colors to stop the CSApprox warning and make xterm vim shine
-set textwidth=0
 set ttimeout
 set ttimeoutlen=50
 set ttyfast
