@@ -21,10 +21,12 @@ let g:mapleader = "\<Space>"
 let g:skip_defaults_vim = 1
 let g:ale_linters = {
   \'go': ['gopls'],
+  \'php': ['langserver'],
   \'python': ['pyls'],
 \}
 let g:ale_fixers = {
   \'go': ['goimports', 'gofmt'],
+  \'php': ['php_cs_fixer'],
   \'python': ['black'],
 \}
 

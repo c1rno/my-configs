@@ -19,6 +19,7 @@ Repo-related things:
   - `GO111MODULE=on go get golang.org/x/tools/gopls`
   - `go get golang.org/x/tools/cmd/goimports`
   - `pip install 'python-language-server[all]'`
+  - `composer require --dev felixfbecker/language-server friendsofphp/php-cs-fixer`
 
 Just my unrelated notes:
 - do not forget `brew analytics off`
