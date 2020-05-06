@@ -14,7 +14,7 @@ let g:NERDTreeWinSize = 40
 let g:ale_completion_enabled = 1
 let g:ale_completion_max_suggestions = 5
 let g:ale_history_enabled = 0
-let g:ctrlp_map = ''
+let g:ctrlp_map = ""
 let g:ctrlp_match_current_file = 1
 let g:loaded_netrwPlugin = 1
 let g:mapleader = "\<Space>"
@@ -25,7 +25,7 @@ let g:ale_linters = {
   \'python': ['pyls'],
 \}
 let g:ale_fixers = {
-  \'go': ['goimports', 'gofmt'],
+  \'go': ['goimports'],
   \'php': ['php_cs_fixer'],
   \'python': ['black'],
 \}
