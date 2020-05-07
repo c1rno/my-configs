@@ -10,7 +10,7 @@ VIM setup working with 8+ version and neovim
 Repo-related things:
 - Installation `git clone --recurse-submodules -j8 https://github.com/c1rno/my-configs.git`
   (or, for old git use `--recursive`)
-- Update `find . -name .git -exec sh -c "echo "Updating {}" && git --git-dir={} checkout master && git --git-dir={} pull" \;`
+- Update `find . -name .git -exec sh -c "echo Updating {} && git --git-dir={} checkout master && git --git-dir={} pull" \;`
 - Manage (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) ||
   `git rm [--cached] <path to plugin>`
 - Manage `git submodule add https://github.com/<plugin name> vimfiles\pack\plugins\start\<plugin name>`
