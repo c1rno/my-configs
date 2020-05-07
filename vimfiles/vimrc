@@ -16,6 +16,7 @@ let g:ale_completion_max_suggestions = 5
 let g:ale_history_enabled = 0
 let g:ctrlp_map = ""
 let g:ctrlp_match_current_file = 1
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:10,results:0'
 let g:loaded_netrwPlugin = 1
 let g:mapleader = "\<Space>"
 let g:skip_defaults_vim = 1
