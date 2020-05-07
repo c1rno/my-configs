@@ -39,6 +39,7 @@ noremap <Leader>[ :ALEFindReferences<CR>
 noremap <Leader>] :ALEGoToDefinition<CR>
 noremap <Leader>b :CtrlPBuffer<CR> "<C-f> switch mode
 noremap <Leader>f :NERDTreeFind<CR>
+noremap <Leader>g :terminal git blame -e -w --date short %<CR>
 noremap <Leader>l :ALEFix<CR>
 noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>q :bdelete<CR>
@@ -68,6 +69,9 @@ endif
 if has("statusline")
   set laststatus=2
   set statusline=%<%f\ \%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\"}%h%r%m%=\%{LinterStatus()}\ %l\:%P
+endif
+if $PAGER == "less" "for usefull `git blame` command
+  let $PAGER = "cat"
 endif
 
 set background=light
