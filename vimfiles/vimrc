@@ -36,6 +36,7 @@ nnoremap <Space> <NOP>
 nnoremap q: <NOP> "disable noise features
 nnoremap q? <NOP>
 nnoremap qq <NOP>
+noremap <Leader>Q :%bdelete!<CR> "force close all
 noremap <Leader>[ :ALEFindReferences<CR>
 noremap <Leader>] :ALEGoToDefinition<CR>
 noremap <Leader>b :CtrlPBuffer<CR> "<C-f> switch mode
