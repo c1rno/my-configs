@@ -13,6 +13,7 @@ let g:NERDTreeStatusline = ""
 let g:NERDTreeWinSize = 40
 let g:ale_completion_enabled = 1
 let g:ale_completion_max_suggestions = 5
+let g:ale_go_gopls_options = "-telemetry.disable -mode=stdio -remote=auto -remote.listen.timeout=0"
 let g:ale_history_enabled = 0
 let g:ctrlp_map = ""
 let g:ctrlp_match_current_file = 1
