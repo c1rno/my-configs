@@ -10,9 +10,9 @@
 [submodule "vimfiles/pack/plugins/start/nerdtree"]
 	path = vimfiles/pack/plugins/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vimfiles/pack/plugins/start/ale"]
-	path = vimfiles/pack/plugins/start/ale
-	url = https://github.com/dense-analysis/ale.git
+[submodule "vimfiles/pack/plugins/start/lsc"]
+	path = vimfiles/pack/plugins/start/lsc
+	url = https://github.com/natebosch/vim-lsc.git
 [submodule "terminal-cfg/ohmyzsh"]
 	path = terminal-cfg/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git

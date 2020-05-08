@@ -15,7 +15,7 @@ Repo-related things:
   `git rm [--cached] <path to plugin>`
 - Manage `git submodule add https://github.com/<plugin name> vimfiles\pack\plugins\start\<plugin name>`
 - Don't forget about LSP for vim completition and navigation
-  - `GO111MODULE=on go get golang.org/x/tools/gopls`
+  - `GO111MODULE=on go get golang.org/x/tools/gopls@master golang.org/x/tools@master`
   - `go get golang.org/x/tools/cmd/goimports`
   - `pip install 'python-language-server[all]'`
   - `composer require --dev felixfbecker/language-server friendsofphp/php-cs-fixer`
