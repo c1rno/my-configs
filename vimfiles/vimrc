@@ -1,15 +1,4 @@
-syntax off
-
 filetype plugin indent on
-
-highlight Visual   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
-highlight Search   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
-highlight PmenuSel ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
-
-highlight lscDiagnosticError   ctermfg=darkred
-highlight lscDiagnosticWarning ctermfg=darkred
-highlight lscDiagnosticInfo    ctermfg=darkblue
-highlight lscDiagnosticHint    ctermfg=darkblue
 
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
@@ -20,9 +9,11 @@ let g:ctrlp_map = ""
 let g:ctrlp_match_current_file = 1
 let g:ctrlp_match_window = "bottom,order:btt,min:1,max:10,results:0"
 let g:loaded_netrwPlugin = 1
+let g:lsc_auto_completeopt = v:false
 let g:lsc_reference_highlights = v:false
 let g:mapleader = "\<Space>"
 let g:skip_defaults_vim = 1
+let g:syntax_on = 1 "see `:h g:syntax_on`
 
 let g:lsc_auto_map = {
 \  'defaults': v:true,
@@ -54,6 +45,7 @@ noremap <Leader>g :terminal git blame -e -w --date short %<CR>
 noremap <Leader>l :LSClientAllDiagnostics<CR>
 noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>q :bdelete<CR>
+noremap <Leader>r :LSClientRestartServer<CR>
 noremap <Tab> :wincmd w<CR>
 
 autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif
@@ -74,10 +66,25 @@ endif
 if $PAGER == "less" "for usefull `git blame` command
   let $PAGER = "cat"
 endif
+if exists("g:syntax_on")
+  syntax off
+
+  highlight lscDiagnosticError   ctermfg=darkred
+  highlight lscDiagnosticWarning ctermfg=darkred
+  highlight lscDiagnosticInfo    ctermfg=darkblue
+  highlight lscDiagnosticHint    ctermfg=darkblue
+
+  highlight Visual   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
+  highlight Search   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
+  highlight PmenuSel ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
+else
+  syntax enable
+endif
 
 set background=light
 set backspace=indent,eol,start
 set belloff=all
+set completeopt=menu,menuone,noinsert,noselect
 set encoding=utf-8
 set fileencodings=utf-8,cp1251,koi8-r,cp866
 set fileformats=unix
