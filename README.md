@@ -29,4 +29,3 @@ Just my unrelated notes:
   `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 - really usefull cmd `docker system prune -a --volumes`
 - [tricky docker endpoint](https://github.com/bufferings/docker-access-host/blob/master/docker-entrypoint.sh)
-

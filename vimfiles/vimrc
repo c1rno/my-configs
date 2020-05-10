@@ -3,7 +3,6 @@ filetype plugin indent on
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
 let g:NERDTreeShowHidden = 1
-let g:NERDTreeStatusline = ""
 let g:NERDTreeWinSize = 40
 let g:ctrlp_map = ""
 let g:ctrlp_match_current_file = 1
@@ -48,7 +47,7 @@ noremap <Leader>q :bdelete<CR>
 noremap <Leader>r :LSClientRestartServer<CR>
 noremap <Tab> :wincmd w<CR>
 
-autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif
+autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif "readonly NERDTree buffer
 
 if !has("nvim")
   set term=$TERM "Make arrow and other keys work
@@ -59,10 +58,6 @@ if has("clipboard")
     set clipboard^=unnamedplus
   endif
 endif
-if has("statusline")
-  set laststatus=2
-  set statusline=%<%f\ \%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\"}%h%r%m%=\%l\:%P
-endif
 if $PAGER == "less" "for usefull `git blame` command
   let $PAGER = "cat"
 endif
@@ -70,9 +65,9 @@ if exists("g:syntax_on")
   syntax off
 
   highlight lscDiagnosticError   ctermfg=darkred
-  highlight lscDiagnosticWarning ctermfg=darkred
-  highlight lscDiagnosticInfo    ctermfg=darkblue
-  highlight lscDiagnosticHint    ctermfg=darkblue
+  highlight lscDiagnosticWarning ctermfg=darkblue
+  highlight lscDiagnosticInfo    ctermfg=darkgreen
+  highlight lscDiagnosticHint    ctermfg=darkgreen
 
   highlight Visual   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
   highlight Search   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
@@ -93,6 +88,7 @@ set history=5
 set hlsearch
 set ignorecase
 set incsearch
+set laststatus=0 "disable fancy statusline
 set lazyredraw
 set linebreak
 set linespace=0
@@ -107,7 +103,8 @@ set noswapfile
 set notitle
 set nowrap
 set nowritebackup
-set shortmess=atI
+set ruler "enable oldschool statusline
+set shortmess=aI
 set showbreak=¬
 set showmatch
 set smartcase
@@ -121,5 +118,4 @@ set undolevels=8
 set viminfo=""
 set visualbell
 set wildignorecase
-set wildmode=list:longest
-
+set wildmode=list:longest,full
