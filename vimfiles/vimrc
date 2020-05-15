@@ -1,5 +1,6 @@
 filetype plugin indent on
 
+" let g:syntax_on = 1 "see `:h g:syntax_on`
 let g:NERDTreeHijackNetrw = 1
 let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
 let g:NERDTreeShowHidden = 1
@@ -12,7 +13,6 @@ let g:lsc_auto_completeopt = v:false
 let g:lsc_reference_highlights = v:false
 let g:mapleader = "\<Space>"
 let g:skip_defaults_vim = 1
-let g:syntax_on = 1 "see `:h g:syntax_on`
 
 let g:lsc_auto_map = {
 \  'defaults': v:true,
@@ -76,6 +76,7 @@ else
   syntax enable
 endif
 
+colorscheme PaperColor
 set background=light
 set backspace=indent,eol,start
 set belloff=all
