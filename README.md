@@ -2,15 +2,16 @@ Just a place where I synchronizing my cfgs ower multiple machines
 
 Good font you may be found here https://github.com/ryanoasis/nerd-fonts/releases
  or `brew tap homebrew/cask-fonts && brew cask install font-jetbrainsmono-nerd-font`
-For Iterm2 good theme may be found here
- https://github.com/aseom/dotfiles/blob/master/osx/iterm2/papercolor-light.itermcolors
 
 VIM setup working with 8+ version and neovim
 
 Repo-related things:
+- Iterm2 alternatives: (`brew cask install kitty`||`brew cask install alacritty`) && ln cfg to `~/.config/kitty/kitty.conf`
 - Installation `git clone --recurse-submodules -j8 https://github.com/c1rno/my-configs.git`
   (or, for old git use `--recursive`)
-- Update `find . -name .git -exec sh -c "echo Updating {} && git --git-dir={} checkout master && git --git-dir={} pull" \;`
+- Update
+    - `git submodule update --recursive --checkout --remote`
+    - `find . -name .git -exec sh -c "echo Updating {} && git --git-dir={} checkout master && git --git-dir={} pull" \;`
 - Manage (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) ||
   `git rm [--cached] <path to plugin>`
 - Manage `git submodule add https://github.com/<plugin name> vimfiles\pack\plugins\start\<plugin name>`
