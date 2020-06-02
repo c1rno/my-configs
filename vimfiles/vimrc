@@ -47,7 +47,6 @@ nnoremap qq <NOP>
 noremap <Leader>Q :%bdelete!<CR> "force close all
 noremap <Leader>b :CtrlPBuffer<CR> "<C-f> switch mode
 noremap <Leader>f :NERDTreeFind<CR>
-noremap <Leader>g :terminal git blame -e -w --date short %<CR>
 noremap <Leader>l :LSClientAllDiagnostics<CR>
 noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>q :bdelete<CR>
@@ -64,9 +63,6 @@ if has("clipboard")
   if has("unnamedplus")  "When possible use + register for copy-paste
     set clipboard^=unnamedplus
   endif
-endif
-if $PAGER == "less" "for usefull `git blame` command
-  let $PAGER = "cat"
 endif
 if exists("g:syntax_on")
   syntax off
