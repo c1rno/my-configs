@@ -48,8 +48,6 @@ noremap <Leader>q :bdelete<CR>
 noremap <Leader>r :LSClientRestartServer<CR>
 noremap <Tab> :wincmd w<CR>
 
-autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif "readonly NERDTree buffer
-
 if !has("nvim")
   set term=$TERM " Make arrow and other keys work
 endif
