@@ -20,7 +20,6 @@ let g:PaperColor_Theme_Options = {
 \    }
 \  }
 \}
-
 let g:lsc_auto_map = {
 \  'defaults': v:true,
 \  'GoToDefinition': '<Leader>]',
@@ -46,9 +45,9 @@ nnoremap q? <NOP>
 nnoremap qq <NOP>
 noremap <Leader>Q :%bdelete!<CR> "force close all
 noremap <Leader>b :CtrlPBuffer<CR> "<C-f> switch mode
+noremap <Leader>e :NERDTreeToggle<CR> "Explore
 noremap <Leader>f :NERDTreeFind<CR>
 noremap <Leader>l :LSClientAllDiagnostics<CR>
-noremap <Leader>n :NERDTreeToggle<CR>
 noremap <Leader>q :bdelete<CR>
 noremap <Leader>r :LSClientRestartServer<CR>
 noremap <Tab> :wincmd w<CR>
