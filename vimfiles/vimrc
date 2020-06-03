@@ -2,7 +2,7 @@ filetype plugin indent on
 
 " let g:syntax_on = 1 "see `:h g:syntax_on`
 let g:NERDTreeHijackNetrw = 1
-let g:NERDTreeNodeDelimiter = "\u00a0" "remove ^G with `syntax off`
+let g:NERDTreeNodeDelimiter = "\u00a0" " remove ^G with `syntax off`
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeWinSize = 40
 let g:ctrlp_map = ""
@@ -40,12 +40,12 @@ let g:lsc_server_commands = {
 
 nnoremap <Leader> <NOP>
 nnoremap <Leader>t <C-o>
-nnoremap q: <NOP> "disable noise features
+nnoremap q: <NOP>|                     " disable noise features
 nnoremap q? <NOP>
 nnoremap qq <NOP>
-noremap <Leader>Q :%bdelete!<CR> "force close all
-noremap <Leader>b :CtrlPBuffer<CR> "<C-f> switch mode
-noremap <Leader>e :NERDTreeToggle<CR> "Explore
+noremap <Leader>Q :%bdelete!<CR>|      " force close all
+noremap <Leader>b :CtrlPBuffer<CR>|    " <C-f> switch mode
+noremap <Leader>e :NERDTreeToggle<CR>| " explore
 noremap <Leader>f :NERDTreeFind<CR>
 noremap <Leader>l :LSClientAllDiagnostics<CR>
 noremap <Leader>q :bdelete<CR>
@@ -55,11 +55,11 @@ noremap <Tab> :wincmd w<CR>
 autocmd BufEnter * if bufname("#") =~# "^NERD_tree_" && winnr("$") > 1 | b# | endif "readonly NERDTree buffer
 
 if !has("nvim")
-  set term=$TERM "Make arrow and other keys work
+  set term=$TERM " Make arrow and other keys work
 endif
 if has("clipboard")
-  set clipboard^=unnamed "On mac and Windows, use * register for copy-paste
-  if has("unnamedplus")  "When possible use + register for copy-paste
+  set clipboard^=unnamed " On mac and Windows, use * register for copy-paste
+  if has("unnamedplus")  " When possible use + register for copy-paste
     set clipboard^=unnamedplus
   endif
 endif
@@ -91,7 +91,7 @@ set history=5
 set hlsearch
 set ignorecase
 set incsearch
-set laststatus=0 "disable fancy statusline
+set laststatus=0 " disable fancy statusline
 set lazyredraw
 set linebreak
 set linespace=0
@@ -106,14 +106,14 @@ set noswapfile
 set notitle
 set nowrap
 set nowritebackup
-set ruler "enable oldschool statusline
+set ruler " enable oldschool statusline
 set shortmess=aIF
 set showbreak=¬
 set showmatch
 set smartcase
 set splitbelow
 set splitright
-set t_Co=256 "Enable 256 colors to stop the CSApprox warning and make xterm vim shine
+set t_Co=256 " enable 256 colors to stop the CSApprox warning and make xterm vim shine
 set ttimeout
 set ttimeoutlen=50
 set ttyfast
