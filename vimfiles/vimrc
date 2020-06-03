@@ -1,22 +1,13 @@
 filetype plugin indent on
 
-" let g:syntax_on = 1 "see `:h g:syntax_on`
-let g:ctrlp_map = ""
-let g:ctrlp_match_current_file = 1
-let g:ctrlp_match_window = "bottom,order:btt,min:1,max:10,results:0"
 let g:lsc_auto_completeopt = v:false
 let g:lsc_reference_highlights = v:false
 let g:mapleader = "\<Space>"
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:skip_defaults_vim = 1
-let g:PaperColor_Theme_Options = {
-\  'theme': {
-\    'default': {
-\      'transparent_background': 1
-\    }
-\  }
-\}
+let g:syntax_on = 1 "see `:h g:syntax_on`
+
 let g:lsc_auto_map = {
 \  'defaults': v:true,
 \  'GoToDefinition': '<Leader>]',
@@ -37,11 +28,11 @@ let g:lsc_server_commands = {
 
 nnoremap <Leader> <NOP>
 nnoremap <Leader>t <C-o>
-nnoremap q: <NOP>|                     " disable noise features
+nnoremap q: <NOP>
 nnoremap q? <NOP>
 nnoremap qq <NOP>
-noremap <Leader>Q :%bdelete!<CR>|      " force close all
-noremap <Leader>b :CtrlPBuffer<CR>|    " <C-f> switch mode
+noremap <Leader>Q :%bdelete!<CR>
+noremap <Leader>b :buffers<CR>:buffer<Space>
 noremap <Leader>e :Explore<CR>
 noremap <Leader>l :LSClientAllDiagnostics<CR>
 noremap <Leader>q :bdelete<CR>
@@ -65,14 +56,13 @@ if exists("g:syntax_on")
   highlight lscDiagnosticInfo    ctermfg=darkgreen
   highlight lscDiagnosticHint    ctermfg=darkgreen
 
-  highlight Visual   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
-  highlight Search   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
   highlight PmenuSel ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
+  highlight Search   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
+  highlight Visual   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
 else
   syntax enable
 endif
 
-colorscheme PaperColor
 set background=light
 set backspace=indent,eol,start
 set belloff=all
