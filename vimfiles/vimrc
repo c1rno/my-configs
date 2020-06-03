@@ -1,17 +1,14 @@
 filetype plugin indent on
 
 " let g:syntax_on = 1 "see `:h g:syntax_on`
-let g:NERDTreeHijackNetrw = 1
-let g:NERDTreeNodeDelimiter = "\u00a0" " remove ^G with `syntax off`
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeWinSize = 40
 let g:ctrlp_map = ""
 let g:ctrlp_match_current_file = 1
 let g:ctrlp_match_window = "bottom,order:btt,min:1,max:10,results:0"
-let g:loaded_netrwPlugin = 1
 let g:lsc_auto_completeopt = v:false
 let g:lsc_reference_highlights = v:false
 let g:mapleader = "\<Space>"
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
 let g:skip_defaults_vim = 1
 let g:PaperColor_Theme_Options = {
 \  'theme': {
@@ -45,8 +42,7 @@ nnoremap q? <NOP>
 nnoremap qq <NOP>
 noremap <Leader>Q :%bdelete!<CR>|      " force close all
 noremap <Leader>b :CtrlPBuffer<CR>|    " <C-f> switch mode
-noremap <Leader>e :NERDTreeToggle<CR>| " explore
-noremap <Leader>f :NERDTreeFind<CR>
+noremap <Leader>e :Explore<CR>
 noremap <Leader>l :LSClientAllDiagnostics<CR>
 noremap <Leader>q :bdelete<CR>
 noremap <Leader>r :LSClientRestartServer<CR>
