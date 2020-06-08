@@ -6,7 +6,6 @@ let g:mapleader = "\<Space>"
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:skip_defaults_vim = 1
-let g:syntax_on = 1 "see `:h g:syntax_on`
 
 let g:lsc_auto_map = {
 \  'defaults': v:true,
@@ -48,19 +47,10 @@ if has("clipboard")
     set clipboard^=unnamedplus
   endif
 endif
-if exists("g:syntax_on")
-  syntax off
 
-  highlight lscDiagnosticError   ctermfg=darkred
-  highlight lscDiagnosticWarning ctermfg=darkblue
-  highlight lscDiagnosticInfo    ctermfg=darkgreen
-  highlight lscDiagnosticHint    ctermfg=darkgreen
-
-  highlight PmenuSel ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
-  highlight Search   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
-  highlight Visual   ctermfg=white ctermbg=darkgray guifg=white guibg=darkgray
-else
+if !exists("g:syntax_on")
   syntax enable
+  colorscheme tempus_dawn
 endif
 
 set background=light
