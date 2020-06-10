@@ -39,9 +39,6 @@ noremap <Leader>q :bdelete<CR>
 noremap <Leader>r :LSClientRestartServer<CR>
 noremap <Tab> :wincmd w<CR>
 
-if !has("nvim")
-  set term=$TERM " Make arrow and other keys work
-endif
 if has("clipboard")
   set clipboard^=unnamed " On mac and Windows, use * register for copy-paste
   if has("unnamedplus")  " When possible use + register for copy-paste
@@ -51,7 +48,7 @@ endif
 
 if !exists("g:syntax_on")
   syntax enable
-  colorscheme tempus_dawn
+  colorscheme papercolor
 endif
 
 set background=light

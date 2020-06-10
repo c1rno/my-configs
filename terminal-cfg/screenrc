@@ -14,7 +14,7 @@ obuflimit 1024
 shell -$SHELL
 shelltitle "?"
 startup_message off
-term "screen-256color"
+term "xterm-256color"
 termcapinfo xterm*|rxvt*|kterm*|Eterm* ti@:te@
 vbell off
 
