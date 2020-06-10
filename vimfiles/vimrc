@@ -1,5 +1,6 @@
 filetype plugin indent on
 
+let g:easygit_enable_command = 1
 let g:lsc_auto_completeopt = v:false
 let g:lsc_reference_highlights = v:false
 let g:mapleader = "\<Space>"
