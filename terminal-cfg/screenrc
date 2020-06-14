@@ -1,4 +1,3 @@
-autodetach on # already enabled by default
 bell_msg ""
 bindkey ^[[1;2C next # shift right arrow
 bindkey ^[[1;2D prev # shift left arrow
@@ -11,10 +10,7 @@ maptimeout 5  # http://vim.wikia.com/wiki/GNU_Screen_integration
 nethack on
 nonblock 5
 obuflimit 1024
-shell -$SHELL
-shelltitle "?"
+shelltitle ?
 startup_message off
-term "xterm-256color"
-termcapinfo xterm*|rxvt*|kterm*|Eterm* ti@:te@
 vbell off
 
