@@ -10,7 +10,9 @@ maptimeout 5  # http://vim.wikia.com/wiki/GNU_Screen_integration
 nethack on
 nonblock 5
 obuflimit 1024
+shell -$SHELL
 shelltitle ?
 startup_message off
+term screen-256color
 vbell off
 
