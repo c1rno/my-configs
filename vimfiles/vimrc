@@ -79,7 +79,7 @@ set notitle
 set nowrap
 set nowritebackup
 set ruler " enable oldschool statusline
-set shortmess=aIF
+set shortmess=aI
 set showbreak=¬
 set showmatch
 set smartcase
