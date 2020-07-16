@@ -10,7 +10,7 @@ Repo-related things:
 - Installation `git clone --recurse-submodules -j8 https://github.com/c1rno/my-configs.git`
   (or, for old git use `--recursive`)
 - Update
-    - `git submodule update --recursive --checkout --remote`
+    - `git pull --recurse-submodules`
     - `find . -name .git -exec sh -c "echo Updating {} && git --git-dir={} checkout master && git --git-dir={} pull" \;`
 - Manage (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) ||
   `git rm [--cached] <path to plugin>`
