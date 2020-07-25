@@ -18,16 +18,8 @@ let g:lsc_auto_map = {
 \  'FindReferences': '<Leader>[',
 \}
 let g:lsc_server_commands = {
-\  "go": {
-\    "log_level": -1,
-\    "command": "gopls serve",
-\    "suppress_stderr": v:true,
-\  },
-\  "python": {
-\    "log_level": -1,
-\    "command": "pyls",
-\    "suppress_stderr": v:true,
-\  },
+\  "go":     {"log_level": -1, "command": "gopls"},
+\  "python": {"log_level": -1, "command": "pyls"},
 \}
 
 nnoremap <Leader> <NOP>
