@@ -89,4 +89,4 @@ set undolevels=8
 set viminfo=""
 set visualbell
 set wildignorecase
-set wildmode=list:longest,full
+set wildmode=list,full
