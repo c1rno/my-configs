@@ -11,7 +11,7 @@ export HISTSIZE=500
 export KUBECONFIG=$HOME/.kube/config.prod:$HOME/.kube/config
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export PAGER=less
+export PAGER=cat
 export XDG_CONFIG_HOME=$HOME
 export PATH="\
 $GOPATH/bin:/snap/bin:\
