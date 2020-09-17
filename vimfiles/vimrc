@@ -1,15 +1,10 @@
 filetype plugin indent on
 
-let g:NERDTreeHighlightCursorline = 0
-let g:NERDTreeHijackNetrw = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeNodeDelimiter = "\u00a0" " remove ^G with `syntax off`
-let g:NERDTreeShowHidden = 1
 let g:easygit_enable_command = 1
-let g:loaded_netrwPlugin = 1
 let g:lsc_auto_completeopt = v:false
 let g:lsc_reference_highlights = v:false
 let g:mapleader = "\<Space>"
+let g:netrw_banner = 0
 let g:skip_defaults_vim = 1
 
 let g:lsc_auto_map = {
@@ -29,7 +24,7 @@ nnoremap q? <NOP>
 nnoremap qq <NOP>
 noremap <Leader>Q :%bdelete!<CR>
 noremap <Leader>b :buffers<CR>:buffer<Space>
-noremap <Leader>e :NERDTreeToggle<CR>
+noremap <Leader>e :Explore<CR>
 noremap <Leader>l :LSClientAllDiagnostics<CR>
 noremap <Leader>q :bdelete<CR>
 noremap <Leader>r :LSClientRestartServer<CR>

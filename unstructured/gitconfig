@@ -1,10 +1,10 @@
 [alias]
 	df = difftool
-    lg = log --pretty=format:'[%C(auto,red)%h%Creset][%C(auto,green)%cd%Creset][%C(auto,blue)%aE%Creset]: %s' --date=short --decorate=short --abbrev=7 -30
+	lg = log --pretty=format:'[%C(auto,red)%h%Creset][%C(auto,green)%cd%Creset][%C(auto,blue)%aE%Creset]: %s' --date=short --decorate=short --abbrev=7 -30
 	st = status -uno
 [core]
 	autocrlf = false
-	editor = vim --noplugin
+	editor = nvim --noplugin
 	excludesfile = ~/.gitignore
 	fileMode = false
 	ignorecase = false
@@ -28,12 +28,12 @@
 	renames = copies
 	tool = vidiff
 [difftool "vidiff"]
-	cmd = vim -d $LOCAL $REMOTE
+	cmd = nvim -d $LOCAL $REMOTE
 	trustExitCode = true
 [merge]
 	tool = vimerge
 [mergetool "vimerge"]
-	cmd = vim -d $LOCAL $REMOTE $BASE $MERGED
+	cmd = nvim -d $LOCAL $REMOTE $BASE $MERGED
 	trustExitCode = true
 [user]
 	email = ivan@bogomolov.su
