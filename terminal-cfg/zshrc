@@ -19,7 +19,7 @@ PROMPT="%~%(?.. [%?]) %# "
 unsetopt share_history
 
 # User configuration
-export EDITOR=vim
+export EDITOR=nvim
 export GOPATH=$HOME/Documents/workspace/go-lang
 export HISTCONTROL=ignoredups:ignorespace
 export HISTFILESIZE=500
@@ -44,10 +44,10 @@ alias less='less -FSRXc'
 alias ll='ls -FGlAhp'
 alias mkdir='mkdir -v'
 alias mv='mv -v'
+alias rm='rm -v'
 
 nvim -v &>/dev/null
 [[ $? -eq 0 ]] && alias vim='nvim'
-
 
 bindkey -e
 # Explicitly enable reverse search

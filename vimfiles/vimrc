@@ -44,7 +44,6 @@ endif
 
 set background=light
 set backspace=indent,eol,start
-set belloff=all
 set completeopt=menu,menuone,noinsert,noselect
 set encoding=utf-8
 set fileencodings=utf-8,cp1251,koi8-r,cp866
@@ -84,4 +83,4 @@ set undolevels=8
 set viminfo=""
 set visualbell
 set wildignorecase
-set wildmode=list,full
+set wildmode=list:full
