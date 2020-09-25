@@ -22,11 +22,10 @@ nnoremap <Leader>t <C-o>
 nnoremap q: <NOP>
 nnoremap q? <NOP>
 nnoremap qq <NOP>
-noremap <Leader>Q :%bdelete!<CR>
 noremap <Leader>b :buffers<CR>:buffer<Space>
 noremap <Leader>e :Explore<CR>
 noremap <Leader>l :LSClientAllDiagnostics<CR>
-noremap <Leader>q :bdelete<CR>
+noremap <Leader>q :bwipeout<CR>
 noremap <Leader>r :LSClientRestartServer<CR>
 noremap <Tab> :wincmd w<CR>
 
