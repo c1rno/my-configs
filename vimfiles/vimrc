@@ -37,8 +37,9 @@ if has("clipboard")
 endif
 
 if !exists("g:syntax_on")
-  syntax enable
-  colorscheme papercolor
+  try
+    silent! colorscheme papercolor
+  endtry
 endif
 
 set background=light
