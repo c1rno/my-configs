@@ -1,22 +1,19 @@
 filetype plugin indent on
 
 let g:easygit_enable_command = 1
-let g:lsc_auto_completeopt = v:false
-let g:lsc_reference_highlights = v:false
 let g:mapleader = "\<Space>"
 let g:netrw_banner = 0
 let g:skip_defaults_vim = 1
-
-let g:lsc_auto_map = {
-\  'defaults': v:true,
-\  'GoToDefinition': '<Leader>]',
-\  'FindReferences': '<Leader>[',
-\}
-let g:lsc_server_commands = {
-\  "go":     {"log_level": -1, "command": "gopls"},
-\  "python": {"log_level": -1, "command": "pyls"},
+let g:ale_completion_autoimport = 1
+let g:ale_completion_enabled = 1
+let g:ale_history_enabled = 0
+let g:ale_linters = {
+  \'go': ['gopls'],
+  \'python': ['pyls'],
 \}
 
+nmap <Leader>[ :ALEFindReferences<CR>
+nmap <Leader>] :ALEGoToDefinition<CR>
 nnoremap <Leader> <NOP>
 nnoremap <Leader>t <C-o>
 nnoremap q: <NOP>
@@ -24,9 +21,7 @@ nnoremap q? <NOP>
 nnoremap qq <NOP>
 noremap <Leader>b :buffers<CR>:buffer<Space>
 noremap <Leader>e :Explore<CR>
-noremap <Leader>l :LSClientAllDiagnostics<CR>
 noremap <Leader>q :bwipeout<CR>
-noremap <Leader>r :LSClientRestartServer<CR>
 noremap <Tab> :wincmd w<CR>
 
 if has("clipboard")
@@ -35,12 +30,14 @@ if has("clipboard")
     set clipboard^=unnamedplus
   endif
 endif
-
 if !exists("g:syntax_on")
   try
     silent! colorscheme papercolor
   endtry
 endif
+try
+  set omnifunc=ale#completion#OmniFunc
+endtry
 
 set background=light
 set backspace=indent,eol,start
