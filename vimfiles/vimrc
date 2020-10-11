@@ -37,8 +37,9 @@ if has("clipboard")
 endif
 
 if !exists("g:syntax_on")
+  syntax enable
   try
-    silent! colorscheme papercolor
+    silent! colorscheme PaperColor
   endtry
 endif
 
@@ -83,4 +84,5 @@ set undolevels=8
 set viminfo=""
 set visualbell
 set wildignorecase
-set wildmode=list:longest
+set wildmode=list:full
+
