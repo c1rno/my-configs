@@ -13,8 +13,8 @@ let g:lsc_auto_map = {
 \  'FindReferences': '<Leader>[',
 \}
 let g:lsc_server_commands = {
-\  "go":     {"log_level": -1, "command": "gopls"},
-\  "python": {"log_level": -1, "command": "pyls"},
+\  "go":     {"command": "gopls"},
+\  "python": {"command": "pyls"},
 \  "php": {
 \    "command": "intelephense --stdio",
 \    "message_hooks": {
