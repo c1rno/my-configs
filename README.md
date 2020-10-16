@@ -15,10 +15,10 @@ Repo-related things:
 - Manage (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) ||
   `git rm [--cached] <path to plugin>`
 - Manage `git submodule add https://github.com/<plugin name> vimfiles\pack\plugins\start\<plugin name>`
-- Don't forget about LSP for vim completition and navigation
+- Don't forget about LSP for vim completition and navigation (https://github.com/natebosch/vim-lsc/wiki/Language-Servers)
   - `GO111MODULE=on go get golang.org/x/tools/gopls@latest`
   - `pip install 'python-language-server[all]'`
-  - `composer require --dev felixfbecker/language-server friendsofphp/php-cs-fixer`
+  - `npm install -g intelephense`
 
 Just my unrelated notes:
 - do not forget `brew analytics off`

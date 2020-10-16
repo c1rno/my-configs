@@ -15,6 +15,14 @@ let g:lsc_auto_map = {
 let g:lsc_server_commands = {
 \  "go":     {"log_level": -1, "command": "gopls"},
 \  "python": {"log_level": -1, "command": "pyls"},
+\  "php": {
+\    "command": "intelephense --stdio",
+\    "message_hooks": {
+\      "initialize": {
+\        "initializationOptions": {"storagePath": "/tmp/intelephense"},
+\      },
+\    },
+\  },
 \}
 
 nnoremap <Leader> <NOP>
