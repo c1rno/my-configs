@@ -4,6 +4,7 @@ let g:easygit_enable_command = 1
 let g:lsp_fold_enabled = 0
 let g:lsp_highlight_references_enabled = 0
 let g:lsp_signs_enabled = 0
+let g:lsp_use_lua = has('nvim-0.4.0') || (has('lua') && has('patch-8.2.0775'))
 let g:lsp_virtual_text_enabled = 0
 let g:mapleader = "\<Space>"
 let g:netrw_banner = 0
@@ -100,7 +101,7 @@ if executable('intelephense')
     autocmd User lsp_setup call lsp#register_server({
       \ 'name': 'intelephense',
       \ 'cmd': {server_info->[&shell, &shellcmdflag, 'intelephense --stdio']},
-      \ 'whitelist': ['php'],
+      \ 'allowlist': ['php'],
       \ 'initialization_options': {'storagePath': '/tmp/intelephense'},
       \ 'workspace_config': {
       \   'intelephense': {
@@ -130,7 +131,7 @@ if executable('yaml-language-server')
     autocmd User lsp_setup call lsp#register_server({
       \ 'name': 'yaml-language-server',
       \ 'cmd': {server_info->['yaml-language-server', '--stdio']},
-      \ 'whitelist': ['yaml', 'yaml.ansible'],
+      \ 'allowlist': ['yaml', 'yaml.ansible'],
       \ 'workspace_config': {
       \   'yaml': {
       \     'validate': v:true,
