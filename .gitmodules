@@ -4,12 +4,15 @@
 [submodule "vimfiles/pack/plugins/start/commentary"]
 	path = vimfiles/pack/plugins/start/commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "vimfiles/pack/plugins/start/lsc"]
-	path = vimfiles/pack/plugins/start/lsc
-	url = https://github.com/natebosch/vim-lsc.git
+[submodule "vimfiles/pack/plugins/start/lsp"]
+	path = vimfiles/pack/plugins/start/lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
 [submodule "vimfiles/pack/plugins/start/easygit"]
 	path = vimfiles/pack/plugins/start/easygit
 	url = https://github.com/neoclide/vim-easygit.git
+[submodule "vimfiles/pack/plugins/start/yaml"]
+	path = vimfiles/pack/plugins/start/yaml
+	url = https://github.com/stephpy/vim-yaml.git
 [submodule "terminal-cfg/ohmyzsh"]
 	path = terminal-cfg/ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
