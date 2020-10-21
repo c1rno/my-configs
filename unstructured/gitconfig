@@ -4,7 +4,7 @@
 	st = status -uno
 [core]
 	autocrlf = false
-	editor = nvim --noplugin
+	editor = vim --noplugin
 	excludesfile = ~/.gitignore
 	fileMode = false
 	ignorecase = false
@@ -28,12 +28,12 @@
 	renames = copies
 	tool = vidiff
 [difftool "vidiff"]
-	cmd = nvim -d $LOCAL $REMOTE
+	cmd = vim -d $LOCAL $REMOTE
 	trustExitCode = true
 [merge]
 	tool = vimerge
 [mergetool "vimerge"]
-	cmd = nvim -d $LOCAL $REMOTE $BASE $MERGED
+	cmd = vim -d $LOCAL $REMOTE $BASE $MERGED
 	trustExitCode = true
 [user]
 	email = ivan@bogomolov.su

@@ -12,13 +12,10 @@ let g:skip_defaults_vim = 1
 
 nnoremap <Leader> <NOP>
 nnoremap <Leader>t <C-o>
-nnoremap q: <NOP>
-nnoremap q? <NOP>
-nnoremap qq <NOP>
-noremap <Leader>b :buffers<CR>:buffer<Space>
-noremap <Leader>e :Explore<CR>
-noremap <Leader>q :bwipeout<CR>
-noremap <Tab> :wincmd w<CR>
+noremap  <Leader>b :buffers<CR>:buffer<Space>
+noremap  <Leader>e :Explore<CR>
+noremap  <Leader>q :bwipeout<CR>
+noremap  <Tab> :wincmd w<CR>
 
 if has("clipboard")
   set clipboard^=unnamed " On mac and Windows, use * register for copy-paste
@@ -29,14 +26,11 @@ endif
 
 if !exists("g:syntax_on")
   syntax enable
-  try
-    silent! colorscheme PaperColor
-  endtry
+  silent! colorscheme PaperColor
 endif
 
 set background=light
 set backspace=indent,eol,start
-set completeopt=menu,menuone,noinsert,noselect
 set encoding=utf-8
 set fileencodings=utf-8,cp1251,koi8-r,cp866
 set fileformats=unix
@@ -52,10 +46,7 @@ set linespace=0
 set list
 set listchars=tab:•·,trail:•,nbsp:¤,extends:¦,precedes:¦
 set matchtime=1
-set mouse=a
 set nobackup
-set noerrorbells
-set nofoldenable
 set noswapfile
 set notitle
 set nowrap
@@ -75,7 +66,8 @@ set undolevels=8
 set viminfo=""
 set visualbell
 set wildignorecase
-set wildmode=list:full
+set wildmode=longest,list
+silent! set completeopt=menu,menuone,noinsert,noselect
 
 if executable('gopls')
   autocmd User lsp_setup call lsp#register_server({
