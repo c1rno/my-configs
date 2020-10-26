@@ -9,9 +9,7 @@ Repo-related things:
 - Iterm2 alternatives: (`brew cask install kitty`||`brew cask install alacritty`) && ln cfg to `~/.config/kitty/kitty.conf`
 - Installation `git clone --recurse-submodules -j8 https://github.com/c1rno/my-configs.git`
   (or, for old git use `--recursive`)
-- Update
-    - `git pull --recurse-submodules`
-    - `find . -name .git -exec sh -c "echo Updating {} && git --git-dir={} checkout master && git --git-dir={} pull" \;`
+- Update: `git submodule foreach "(git checkout master; git pull)&"`
 - Manage (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) ||
   `git rm [--cached] <path to plugin>`
 - Manage `git submodule add https://github.com/<plugin name> vimfiles\pack\plugins\start\<plugin name>`
