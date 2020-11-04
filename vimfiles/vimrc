@@ -143,7 +143,6 @@ function! s:on_lsp_buffer_enabled() abort
   if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
   nmap <buffer> <Leader>[ :LspReferences<CR>
   nmap <buffer> <Leader>] :LspDefinition<CR>
-  nmap <buffer> <Leader>h :LspHover<CR>
   nmap <buffer> <Leader>i :LspImplementation<CR>
   nmap <buffer> <Leader>l :LspDocumentDiagnostics<CR>
 endfunction

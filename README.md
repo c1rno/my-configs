@@ -29,3 +29,6 @@ Just my unrelated notes:
   `$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
 - really usefull cmd `docker system prune -a --volumes`
 - [tricky docker endpoint](https://github.com/bufferings/docker-access-host/blob/master/docker-entrypoint.sh)
+- to start `vim` + `gopls` with custom build flags, just pass it over env:
+  `GOFLAGS="-tags=windows" vim <file-name>.go`
+
