@@ -66,7 +66,7 @@ set undolevels=8
 set viminfo=""
 set visualbell
 set wildignorecase
-set wildmode=longest,list
+set wildmode=list,full
 silent! set completeopt=menu,menuone,noinsert,noselect
 
 if executable('gopls')
