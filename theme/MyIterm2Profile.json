@@ -315,9 +315,9 @@
   "Ansi 14 Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.52941176470588236,
+    "Blue Component" : 0.54509803921568623,
     "Alpha Component" : 1,
-    "Green Component" : 0.37254901960784315
+    "Green Component" : 0.54509803921568623
   },
   "Ansi 2 Color" : {
     "Red Component" : 0.37254901960784315,
@@ -373,7 +373,7 @@
   },
   "Name" : "MyProfile",
   "Blinking Cursor" : false,
-  "Guid" : "BA6D0EB4-F0CD-4507-ADF7-EA11A7153219",
+  "Guid" : "E934B05A-1964-46D0-9521-DA6544163BDC",
   "Idle Code" : 0,
   "Ansi 10 Color" : {
     "Red Component" : 0.37254901960784315,
@@ -409,7 +409,7 @@
   },
   "Session Close Undo Timeout" : 0,
   "Blur" : false,
-  "Vertical Spacing" : 0.85,
+  "Vertical Spacing" : 0.84999999999999998,
   "Normal Font" : "JetBrainsMonoNerdFontComplete-Regular 19",
   "Ansi 7 Color" : {
     "Red Component" : 0.93333333333333335,
@@ -422,7 +422,7 @@
   "Space" : 0,
   "Command" : "",
   "Terminal Type" : "xterm-256color",
-  "Horizontal Spacing" : 0.95,
+  "Horizontal Spacing" : 0.94999999999999996,
   "Reduce Flicker" : true,
   "Option Key Sends" : 0,
   "Minimum Contrast" : 0,
@@ -437,9 +437,9 @@
   "Ansi 6 Color" : {
     "Red Component" : 0,
     "Color Space" : "sRGB",
-    "Blue Component" : 0.52941176470588236,
+    "Blue Component" : 0.54509803921568623,
     "Alpha Component" : 1,
-    "Green Component" : 0.37254901960784315
+    "Green Component" : 0.54509803921568623
   },
   "Transparency" : 0,
   "Background Color" : {
