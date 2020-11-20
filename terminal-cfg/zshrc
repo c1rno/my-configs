@@ -15,7 +15,7 @@ plugins=(
     zsh_reload
 )
 source $ZSH/oh-my-zsh.sh
-PROMPT="%~%(?.. [%?]) %# "
+PROMPT=': %~%(?.%(!.#.;).%F{6}%B;%b%f) '
 unsetopt share_history
 
 # User configuration

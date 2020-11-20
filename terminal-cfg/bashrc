@@ -1,4 +1,4 @@
-PS1="${debian_chroot:+($debian_chroot)}\w[\$?]\[$(tput bold)\]\$\[$(tput sgr0)\] "
+PS1=": ${debian_chroot:+($debian_chroot)}\w;\[$(tput sgr0)\] "
 
 shopt -s no_empty_cmd_completion
 
