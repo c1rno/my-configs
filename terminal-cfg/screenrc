@@ -2,7 +2,6 @@ bell_msg ""
 bindkey ^[[1;2C next # shift right arrow
 bindkey ^[[1;2D prev # shift left arrow
 caption splitonly
-deflogin off
 defscrollback 65536
 defutf8 on
 hardstatus alwayslastline "%{= k}%-w%{= KW}%50>[%n %t]%{-}%+w%<"

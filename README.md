@@ -1,13 +1,13 @@
 Just a place where I synchronizing my cfgs ower multiple machines
 
 Good font you may be found here https://github.com/ryanoasis/nerd-fonts/releases
- or `brew tap homebrew/cask-fonts && brew cask install font-jetbrainsmono-nerd-font`
+ or `brew install homebrew/cask-fonts/font-jetbrains-mono`
 
 VIM setup working with 8+ version and neovim
 
 Repo-related things:
+- Installation `git clone --depth 1 --recurse-submodules -j8 https://github.com/c1rno/my-configs.git`
 - Iterm2 alternatives: (`brew cask install kitty`||`brew cask install alacritty`) && ln cfg to `~/.config/kitty/kitty.conf`
-- Installation `git clone --recurse-submodules -j8 https://github.com/c1rno/my-configs.git`
   (or, for old git use `--recursive`)
 - Update: `git submodule foreach "(git checkout master; git pull)&"`
 - Manage (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) ||
