@@ -19,8 +19,8 @@ PROMPT=': %~%(?.%(!.#.;).%F{6}%B;%b%f) '
 unsetopt share_history
 
 # User configuration
-export EDITOR=nvim
-export GOPATH=$HOME/Documents/workspace/go-lang
+export EDITOR=vim
+export GOPATH=$HOME/Documents/workspace/go
 export HISTCONTROL=ignoredups:ignorespace
 export HISTFILESIZE=500
 export HISTSIZE=500
@@ -32,9 +32,7 @@ export PATH="\
 $GOPATH/bin:\
 $HOME/Library/Python/2.7/bin:\
 /snap/bin:\
-/usr/local/Cellar/nmap/7.80_1/bin:\
 /usr/local/sbin:\
-/usr/local/Cellar/mysql-client/8.0.22/bin:\
 $PATH"
 
 alias cp='cp -v'
@@ -44,9 +42,6 @@ alias ll='ls -FGlAhp'
 alias mkdir='mkdir -v'
 alias mv='mv -v'
 alias rm='rm -v'
-
-# nvim -v &>/dev/null
-# [[ $? -eq 0 ]] && alias vim='nvim'
 
 bindkey -e
 # Explicitly enable reverse search
@@ -85,5 +80,4 @@ bindkey "\e[8~" end-of-line
 bindkey "\e[4~" end-of-line
 
 [[ -e ~/.private_cfg ]] && emulate sh -c 'source ~/.private_cfg'
-# eval "$(starship init zsh 2>/dev/null)"
 
