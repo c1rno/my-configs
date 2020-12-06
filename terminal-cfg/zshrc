@@ -27,7 +27,7 @@ export HISTSIZE=500
 export KUBECONFIG=$HOME/.kube/config.prod:$HOME/.kube/config
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export PAGER=cat
+export PAGER=less
 export PATH="\
 $GOPATH/bin:\
 $HOME/Library/Python/2.7/bin:\

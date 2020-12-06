@@ -1,7 +1,12 @@
 [alias]
 	df = difftool
-	lg = log --pretty=format:'[%C(auto,red)%h%Creset][%C(auto,green)%cd%Creset][%C(auto,blue)%aE%Creset]: %s' --date=short --decorate=short --abbrev=7 -30
 	st = status -uno
+	lg = log \
+		--abbrev=7 \
+		--date=short \
+		--decorate=short \
+		--graph \
+		--pretty=format:'[%C(auto,red)%h%Creset][%C(auto,green)%cd%Creset][%C(auto,blue)%aE%Creset]: %s'
 [core]
 	autocrlf = false
 	editor = vim --noplugin
