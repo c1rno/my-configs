@@ -4,7 +4,7 @@ shopt -s no_empty_cmd_completion
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export EDITOR=vim
-export GOPATH=$HOME/Documents/workspace/go-lang
+export GOPATH=$HOME/Documents/workspace/go
 export HISTCONTROL=ignoredups:ignorespace
 export HISTFILESIZE=500
 export HISTSIZE=500
@@ -16,9 +16,6 @@ export PATH="\
 $GOPATH/bin:\
 $HOME/Library/Python/2.7/bin:\
 /snap/bin:\
-/usr/local/Cellar/golangci-lint/1.20.1/bin:\
-/usr/local/Cellar/nmap/7.80_1/bin:\
-/usr/local/Cellar/universal-ctags/HEAD-e216bb4/bin:\
 /usr/local/sbin:\
 $PATH"
 
