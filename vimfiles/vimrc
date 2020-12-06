@@ -24,6 +24,7 @@ if has("clipboard")
   endif
 endif
 
+silent! unlet g:syntax_on
 if !exists("g:syntax_on")
   syntax enable
   silent! colorscheme PaperColor
