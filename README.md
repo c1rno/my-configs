@@ -1,7 +1,7 @@
 Just a place where I synchronizing my cfgs ower multiple machines
 
 Good font you may be found here https://github.com/ryanoasis/nerd-fonts/releases
- or `brew install homebrew/cask-fonts/font-jetbrains-mono`
+ or `brew install font-hack-nerd-font`
 
 VIM setup working with 8+ version and neovim
 
