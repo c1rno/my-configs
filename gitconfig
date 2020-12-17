@@ -41,5 +41,10 @@
 	cmd = vim -d $LOCAL $REMOTE $BASE $MERGED
 	trustExitCode = true
 [user]
-	email = ivan@bogomolov.su
+	email = isbogomolov@avito.ru
 	name = Ivan Bogomolov
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

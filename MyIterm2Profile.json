@@ -105,7 +105,7 @@
   "Unlimited Scrollback" : false,
   "Allow Title Setting" : false,
   "Custom Command" : "No",
-  "Title Components" : 1,
+  "Title Components" : 32,
   "Keyboard Map" : {
     "0xf70f-0x40000" : {
       "Text" : "[24;5~",
@@ -371,7 +371,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0
   },
-  "Name" : "MyProfile",
+  "Name" : "MyIterm2Profile",
   "Blinking Cursor" : false,
   "Guid" : "E934B05A-1964-46D0-9521-DA6544163BDC",
   "Idle Code" : 0,
@@ -409,8 +409,8 @@
   },
   "Session Close Undo Timeout" : 0,
   "Blur" : false,
-  "Vertical Spacing" : 0.84999999999999998,
-  "Normal Font" : "JetBrainsMonoNerdFontComplete-Regular 19",
+  "Vertical Spacing" : 1,
+  "Normal Font" : "Hack-Regular 18",
   "Ansi 7 Color" : {
     "Red Component" : 0.93333333333333335,
     "Color Space" : "sRGB",
@@ -422,7 +422,7 @@
   "Space" : 0,
   "Command" : "",
   "Terminal Type" : "xterm-256color",
-  "Horizontal Spacing" : 0.94999999999999996,
+  "Horizontal Spacing" : 1,
   "Reduce Flicker" : true,
   "Option Key Sends" : 0,
   "Minimum Contrast" : 0,
@@ -451,7 +451,7 @@
   },
   "Screen" : -1,
   "Initial Use Transparency" : false,
-  "Non Ascii Font" : "JetBrainsMonoNerdFontComplete-Regular 17",
+  "Non Ascii Font" : "Menlo-Regular 11",
   "Ansi 13 Color" : {
     "Red Component" : 0.52941176470588236,
     "Color Space" : "sRGB",
@@ -463,7 +463,7 @@
   "Columns" : 80,
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
-  "Custom Directory" : "No",
+  "ASCII Ligatures" : false,
   "Thin Strokes" : 0,
-  "ASCII Ligatures" : false
+  "Custom Directory" : "No"
 }

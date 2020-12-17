@@ -13,6 +13,6 @@
 [submodule "vimfiles/pack/plugins/start/yaml"]
 	path = vimfiles/pack/plugins/start/yaml
 	url = https://github.com/stephpy/vim-yaml.git
-[submodule "terminal-cfg/ohmyzsh"]
-	path = terminal-cfg/ohmyzsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "ohmyzsh"]
+	path = ohmyzsh
+	url = ./ohmyzsh
