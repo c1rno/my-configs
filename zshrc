@@ -2,7 +2,9 @@ export ZSH=$HOME/.ohmyzsh
 
 CASE_SENSITIVE="false"
 DISABLE_AUTO_TITLE="true"
+ZSH_DISABLE_COMPFIX="true"
 ZSH_THEME=""
+
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt hist_reduce_blanks

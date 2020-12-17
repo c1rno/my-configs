@@ -15,4 +15,4 @@
 	url = https://github.com/stephpy/vim-yaml.git
 [submodule "ohmyzsh"]
 	path = ohmyzsh
-	url = ./ohmyzsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
