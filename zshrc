@@ -35,6 +35,7 @@ $GOPATH/bin:\
 $HOME/Library/Python/2.7/bin:\
 /snap/bin:\
 /usr/local/sbin:\
+/usr/local/bin:\
 $PATH"
 
 alias cp='cp -v'
