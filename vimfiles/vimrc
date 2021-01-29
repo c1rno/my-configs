@@ -69,7 +69,6 @@ set splitright
 set t_Co=256 " enable 256 colors to stop the CSApprox warning and make xterm vim shine
 set ttimeout
 set ttimeoutlen=50
-set ttyfast
 set undolevels=8
 set viminfo=""
 set visualbell
