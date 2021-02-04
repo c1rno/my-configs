@@ -4,9 +4,9 @@
 [submodule "vimfiles/pack/plugins/start/commentary"]
 	path = vimfiles/pack/plugins/start/commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "vimfiles/pack/plugins/start/lsp"]
-	path = vimfiles/pack/plugins/start/lsp
-	url = https://github.com/prabirshrestha/vim-lsp.git
+[submodule "vimfiles/pack/plugins/start/ale"]
+	path = vimfiles/pack/plugins/start/ale
+	url = https://github.com/dense-analysis/ale.git
 [submodule "vimfiles/pack/plugins/start/easygit"]
 	path = vimfiles/pack/plugins/start/easygit
 	url = https://github.com/neoclide/vim-easygit.git
