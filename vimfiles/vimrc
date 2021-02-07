@@ -2,6 +2,8 @@ filetype plugin indent on
 
 let g:ale_completion_autoimport = 1
 let g:ale_completion_enabled = 1
+let g:ale_history_enabled = 0
+let g:ale_lsp_suggestions = 1
 let g:easygit_enable_command = 1
 let g:mapleader = "\<Space>"
 let g:netrw_banner = 0
