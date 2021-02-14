@@ -1626,6 +1626,8 @@
 	<string>Term</string>
 	<key>name</key>
 	<string>PaperColor-light</string>
+	<key>shellExitAction</key>
+	<integer>1</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 </dict>

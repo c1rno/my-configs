@@ -1,3 +1,4 @@
+altscreen on # fix fullscreen programs
 bell_msg ""
 bindkey ^[[1;2C next # shift right arrow
 bindkey ^[[1;2D prev # shift left arrow
@@ -14,4 +15,3 @@ shelltitle ?
 startup_message off
 term screen-256color
 vbell off
-
