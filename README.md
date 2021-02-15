@@ -7,19 +7,19 @@ VIM setup working with 8+ version and neovim
 
 Repo-related things:
 - Installation `git clone --depth 1 --recurse-submodules -j8 https://github.com/c1rno/my-configs.git`
-- Iterm2 alternatives: (`brew cask install kitty`||`brew cask install alacritty`) && ln cfg to `~/.config/kitty/kitty.conf`
   (or, for old git use `--recursive`)
+- Iterm2 alternatives: (`brew cask install kitty`||`brew cask install alacritty`) && ln cfg to `~/.config/kitty/kitty.conf`
 - Update: `git submodule foreach "(git checkout master; git pull)&"`
 - Manage (`git submodule deinit <path to plugin>` && `rm -rf <path to plugin>`) ||
   `git rm [--cached] <path to plugin>`
 - Manage `git submodule add https://github.com/<plugin name> vimfiles\pack\plugins\start\<plugin name>`
-- Don't forget about LSP for vim completition and navigation (https://github.com/prabirshrestha/vim-lsp/wiki/Servers)
+- Don't forget about LSP for vim completition and navigation
   - `GO111MODULE=on go get golang.org/x/tools/gopls@latest`
   - `pip install 'python-language-server[all]'`
   - `npm install -g intelephense`
   - `npm install -g yaml-language-server`
 
-Just my unrelated notes:
+My unrelated notes:
 - do not forget `brew analytics off`
 - for docker do not forget enable `build_kit`
 - if you use screen on Mac, install it from brew, default not supported utf8

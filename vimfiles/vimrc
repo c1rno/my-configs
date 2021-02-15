@@ -1,4 +1,5 @@
 filetype plugin indent on
+syntax enable
 
 let g:ale_completion_autoimport = 1
 let g:ale_completion_enabled = 1
@@ -13,6 +14,13 @@ let g:ale_linters = {
 \  'php': ['intelephense'],
 \  'python': ['pyls'],
 \  'yaml': ['yaml-language-server'],
+\}
+let g:PaperColor_Theme_Options = {
+\  'theme': {
+\    'default': {
+\      'transparent_background': 1
+\    }
+\  }
 \}
 
 nmap <Leader>[ :ALEFindReferences<CR>
@@ -29,19 +37,6 @@ if has("clipboard")
   if has("unnamedplus")  " When possible use + register for copy-paste
     set clipboard^=unnamedplus
   endif
-endif
-
-silent! unlet g:syntax_on
-if !exists("g:syntax_on")
-  syntax enable
-  silent! colorscheme PaperColor
-  let g:PaperColor_Theme_Options = {
-    \   'theme': {
-    \     'default': {
-    \       'transparent_background': 1
-    \     }
-    \   }
-    \ }
 endif
 
 set background=light
@@ -80,5 +75,6 @@ set undolevels=8
 set viminfo=""
 set wildignorecase
 set wildmode=list:longest,full
+silent! colorscheme PaperColor
 silent! set completeopt=menu,menuone,noinsert,noselect
 silent! set omnifunc=ale#completion#OmniFunc
