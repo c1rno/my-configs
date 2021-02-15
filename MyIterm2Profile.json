@@ -373,7 +373,7 @@
   },
   "Name" : "MyIterm2Profile",
   "Blinking Cursor" : false,
-  "Guid" : "E934B05A-1964-46D0-9521-DA6544163BDC",
+  "Guid" : "C4F886EA-4DAF-4F82-B2C0-5FEAF4D41BDD",
   "Idle Code" : 0,
   "Ansi 10 Color" : {
     "Red Component" : 0.37254901960784315,
@@ -409,7 +409,7 @@
   },
   "Session Close Undo Timeout" : 0,
   "Blur" : false,
-  "Vertical Spacing" : 0.94999999999999996,
+  "Vertical Spacing" : 1,
   "Normal Font" : "JetBrainsMonoNL-Regular 20",
   "Ansi 7 Color" : {
     "Red Component" : 0.93333333333333335,
@@ -464,6 +464,6 @@
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
   "ASCII Ligatures" : false,
-  "Thin Strokes" : 0,
+  "Thin Strokes" : 4,
   "Custom Directory" : "No"
 }

@@ -79,6 +79,6 @@ set ttimeoutlen=50
 set undolevels=8
 set viminfo=""
 set wildignorecase
-set wildmode=list,longest,full
+set wildmode=list:longest,full
 silent! set completeopt=menu,menuone,noinsert,noselect
 silent! set omnifunc=ale#completion#OmniFunc
