@@ -29,7 +29,7 @@ nnoremap <Leader> <NOP>
 nnoremap <Leader>t <C-o>
 noremap  <Leader>b :buffers<CR>:buffer<Space>
 noremap  <Leader>e :Explore<CR>
-noremap  <Leader>q :bwipeout<CR>
+noremap  <Leader>q :bdelete<CR>
 noremap  <Tab> :wincmd w<CR>
 
 if has("clipboard")
@@ -50,9 +50,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=0 " disable fancy statusline
-set lazyredraw
 set linebreak
-set linespace=0
 set list
 set listchars=tab:•·,trail:•,nbsp:¤,extends:¦,precedes:¦
 set matchtime=1
