@@ -23,14 +23,15 @@ let g:PaperColor_Theme_Options = {
 \  }
 \}
 
-nmap <Leader>[ :ALEFindReferences<CR>
-nmap <Leader>] :ALEGoToDefinition<CR>
 nnoremap <Leader> <NOP>
+nnoremap <Leader>[ :ALEFindReferences<CR>
+nnoremap <Leader>] :ALEGoToDefinition<CR>
+nnoremap <Leader>b :buffers<CR>:buffer<Space>
+nnoremap <Leader>e :Explore<CR>
+nnoremap <Leader>l :copen<CR> "lopen for ale
+nnoremap <Leader>q :bdelete<CR>
 nnoremap <Leader>t <C-o>
-noremap  <Leader>b :buffers<CR>:buffer<Space>
-noremap  <Leader>e :Explore<CR>
-noremap  <Leader>q :bdelete<CR>
-noremap  <Tab> :wincmd w<CR>
+nnoremap <Tab> :wincmd w<CR>
 
 if has("clipboard")
   set clipboard^=unnamed " On mac and Windows, use * register for copy-paste
