@@ -27,8 +27,8 @@ nnoremap <Leader> <NOP>
 nnoremap <Leader>[ :ALEFindReferences<CR>
 nnoremap <Leader>] :ALEGoToDefinition<CR>
 nnoremap <Leader>b :buffers<CR>:buffer<Space>
+nnoremap <Leader>c :copen<CR> "lopen for ale
 nnoremap <Leader>e :Explore<CR>
-nnoremap <Leader>l :copen<CR> "lopen for ale
 nnoremap <Leader>q :bdelete<CR>
 nnoremap <Leader>t <C-o>
 nnoremap <Tab> :wincmd w<CR>
