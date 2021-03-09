@@ -8,6 +8,7 @@ let g:ale_lsp_suggestions = 1
 let g:easygit_enable_command = 1
 let g:mapleader = "\<Space>"
 let g:netrw_banner = 0
+let g:netrw_liststyle = 3
 let g:skip_defaults_vim = 1
 let g:ale_linters = {
 \  'go': ['gopls'],
@@ -26,10 +27,11 @@ let g:PaperColor_Theme_Options = {
 nnoremap <Leader> <NOP>
 nnoremap <Leader>[ :ALEFindReferences<CR>
 nnoremap <Leader>] :ALEGoToDefinition<CR>
-nnoremap <Leader>b :buffers<CR>:buffer<Space>
-nnoremap <Leader>c :copen<CR> "lopen for ale
-nnoremap <Leader>e :Explore<CR>
-nnoremap <Leader>q :bdelete<CR>
+nnoremap <Leader>b :buffers!<CR>:buffer<Space>
+nnoremap <Leader>c :copen<CR>
+nnoremap <Leader>e :Lexplore<CR>
+nnoremap <Leader>l :lopen<CR>
+nnoremap <Leader>q :bwipeout<CR>
 nnoremap <Leader>t <C-o>
 nnoremap <Tab> :wincmd w<CR>
 
