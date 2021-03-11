@@ -29,7 +29,7 @@ nnoremap <Leader>[ :ALEFindReferences<CR>
 nnoremap <Leader>] :ALEGoToDefinition<CR>
 nnoremap <Leader>b :buffers!<CR>:buffer<Space>
 nnoremap <Leader>c :copen<CR>
-nnoremap <Leader>e :Lexplore<CR>
+nnoremap <Leader>e :Explore<CR>
 nnoremap <Leader>l :lopen<CR>
 nnoremap <Leader>q :bwipeout<CR>
 nnoremap <Leader>t <C-o>
